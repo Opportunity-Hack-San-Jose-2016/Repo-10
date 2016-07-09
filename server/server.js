@@ -67,8 +67,44 @@ function verifyRequestSignature(req, res, buf) {
   }
 }
 
+router.route('/listings/:id')
+	.get(function(req, res){
+	
+	});
+router.route('/listings')
+	.get(function(req, res){
+	
+	});
 
-app.use('/api', router);
+router.route('/reviews')
+	.post(function(req, res){
+	
+	
+	});
+
+router.route('/reviews/listing/:listing_id')
+	.get(function(req, res){
+	
+	
+	})
+
+router.route('/reviews/id/:review_id')
+	.get(function(req, res){
+		
+	
+	})
+	.put(function(req, res){
+	
+	
+	});
+
+
+
+
+
+
+
+app.use('/api/v1', router);
 
 
 

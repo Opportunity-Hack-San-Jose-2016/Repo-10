@@ -4,7 +4,7 @@
   "description": "## Node.js server backend",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node_modules/mocha/bin/mocha test"
   },
   "repository": {
     "type": "git",
@@ -18,7 +18,12 @@
   "homepage": "https://github.com/ZacBlanco/Repo-10",
   "dependencies": {
     "body-parser": "*",
+    "chai": "^3.5.0",
     "express": "*",
+    "mocha": "^2.5.3",
     "node-parse-api": "*"
+  },
+  "devDependencies": {
+    "coveralls": "^2.11.9"
   }
 }

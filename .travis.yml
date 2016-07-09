@@ -1,0 +1,11 @@
+language: node_js
+node_js:
+  - "5"
+install:
+  - cd server/
+  - npm install
+before_script:
+  - sudo mkdir /data
+  - sudo mkdir /data/helperupper
+script:
+  - npm test

@@ -23,7 +23,7 @@
     "node-parse-api": "*",
     "config": "*",
     "crypto": "*",
-    "request": "*"
+    "request": "*",
     "mocha": "^2.5.3",
     "node-parse-api": "*"
   },

@@ -19,6 +19,9 @@
   "dependencies": {
     "body-parser": "*",
     "express": "*",
-    "node-parse-api": "*"
+    "node-parse-api": "*",
+    "config": "*",
+    "crypto": "*",
+    "request": "*"
   }
 }

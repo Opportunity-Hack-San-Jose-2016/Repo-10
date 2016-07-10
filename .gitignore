@@ -1,0 +1,47 @@
+# OSX
+#
+.DS_Store
+
+# Xcode
+#
+app/build/
+app/*.pbxuser
+app/!default.pbxuser
+app/*.mode1v3
+app/!default.mode1v3
+app/*.mode2v3
+app/!default.mode2v3
+app/*.perspectivev3
+app/!default.perspectivev3
+app/xcuserdata
+app/*.xccheckout
+app/*.moved-aside
+app/DerivedData
+app/*.hmap
+app/*.ipa
+app/*.xcuserstate
+app/project.xcworkspace
+
+# Android/IJ
+#
+app/*.iml
+app/.idea
+app/.gradle
+app/local.properties
+
+# node.js
+#
+app/node_modules/
+app/npm-debug.log
+server/node_modules/
+server/npm-debug.log
+
+# BUCK
+app/buck-out/
+app/\.buckd/
+app/android/app/libs
+app/android/keystores/debug.keystore
+
+# Firebase
+app/config/credentials.json
+server/config/credentials.json

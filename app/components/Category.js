@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
   },
   description: {
-    color: '#333333',
+    color: '#c0c0c0',
     fontSize: 12
   }
 })

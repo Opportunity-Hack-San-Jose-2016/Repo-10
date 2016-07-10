@@ -13,15 +13,15 @@ import {
   Image,
 } from 'react-native';
 
-const ListingEvent = require('./ListingEvent')
+import MapView from 'react-native-maps';
 
-class Listing extends Component {
+class ListingEvent extends Component {
   render() {
-    if (this.props.item.type == 'events') {
-      return (<ListingEvent item={this.props.item} />);
-    }
     return (
       <View style={styles.row}>
+      <View>
+        <Image source={{uri: "https://maps.googleapis.com/maps/api/staticmap?center=" + this.props.item.location.lat + "," + this.props.item.location.lng + "&zoom=13&size=500x200&maptype=roadmap&markers=color:blue%7Clabel:S%7C" + this.props.item.location.lat + "," + this.props.item.location.lng + "&key=AIzaSyBVlVh60b5zD3CzZRCP3W4Aiuy2rtfbvJM"}} />
+        </View>
         <Text>{JSON.stringify(this.props.item)}</Text>
       </View>
     );
@@ -46,6 +46,6 @@ const styles = StyleSheet.create({
   }
 })
 
-AppRegistry.registerComponent('Listing', () => TopBar);
+AppRegistry.registerComponent('ListingEvent', () => ListingEvent);
 
-module.exports = Listing;
+module.exports = ListingEvent;

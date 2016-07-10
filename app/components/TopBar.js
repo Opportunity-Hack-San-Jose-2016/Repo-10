@@ -18,6 +18,7 @@ class TopBar extends Component {
     return (
       <View style={styles.topBar}>
         <Image style={styles.logo} source={require('./UPLogo.png')} />
+        <Text style={styles.header}>HelperUpper</Text>
       </View>
     );
   }
@@ -26,15 +27,16 @@ class TopBar extends Component {
 const styles = StyleSheet.create({
   topBar: {
     backgroundColor: 'black',
-    height: 84,
+    height: 100,
     marginTop: 0,
     padding: 10,
     paddingTop: 30,
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
     alignItems: 'center',
     flexDirection: 'row',
   },
   header: {
+    marginTop: 5,
     textAlign: 'center',
     color: 'white',
     fontSize: 18,

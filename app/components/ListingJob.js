@@ -13,13 +13,8 @@ import {
   Image,
 } from 'react-native';
 
-const ListingEvent = require('./ListingEvent')
-
-class Listing extends Component {
+class ListingJob extends Component {
   render() {
-    if (this.props.item.type == 'events') {
-      return (<ListingEvent item={this.props.item} />);
-    }
     return (
       <View style={styles.row}>
         <Text>{JSON.stringify(this.props.item)}</Text>
@@ -46,6 +41,6 @@ const styles = StyleSheet.create({
   }
 })
 
-AppRegistry.registerComponent('Listing', () => TopBar);
+AppRegistry.registerComponent('ListingJob', () => TopBar);
 
-module.exports = Listing;
+module.exports = ListingJob;

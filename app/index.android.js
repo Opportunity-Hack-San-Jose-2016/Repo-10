@@ -19,7 +19,7 @@ import {
 const Firebase = require('./config/Firebase.js');
 const db = Firebase.database();
 
-// const component = require('./components/index.js');
+const CustomComponents = require('./components/index.js');
 const view = require('./views/index.js');
 
 class HelperUpper extends Component {
@@ -49,6 +49,7 @@ class HelperUpper extends Component {
             barStyle="light-content"
             {...route.statusBar}
           />
+          <CustomComponents.TopBar />
 
           {
             React.createElement(

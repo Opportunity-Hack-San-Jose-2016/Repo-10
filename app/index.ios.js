@@ -11,10 +11,15 @@ import {
   Text,
   View,
   ListView,
+  StatusBar,
+  Navigator,
 } from 'react-native';
 
 const Firebase = require('./config/Firebase.js');
 const db = Firebase.database();
+
+const component = require('./components/index.js');
+const view = require('./views/index.js');
 
 class HelperUpper extends Component {
   constructor(props) {
@@ -27,34 +32,37 @@ class HelperUpper extends Component {
     this.listings = db.ref("listings");
   }
 
-  componentDidMount () {
-    this.listings.on('value', (snap) => {
-      var result = [];
-      snap.forEach((child) => {
-        result.push({
-          title: child.val().name
-        });
-      })
+  renderScene(route, navigator) {
+    if (route.component == 'inline') {
+      return route.payload
+    } else {
+      return (
+        <View style={{flex: 1}}>
+          <StatusBar
+            barStyle="default"
+            {...route.statusBar}
+          />
 
-      this.setState({
-        dataSource: this.state.dataSource.cloneWithRows(result)
-      });
-    })
-  }
-
-  _renderRow (item) {
-    return <Text>{item.title}</Text>;
+          {
+            React.createElement(
+              route.component,
+              {...this.props, ...route.payload, route, navigator, view: view}
+            )
+          }
+        </View>
+      );
+    }
   }
 
   render() {
     return (
-      <View style={{flex: 1, backgroundColor: 'white'}}>
-        <ListView
-          dataSource={this.state.dataSource}
-          renderRow={this._renderRow.bind(this)}
-          enableEmptySections={true}
-          style={{flex: 1}} />
-      </View>
+      <Navigator
+        initialRoute={{
+          component: view.Dashboard,
+          statusBar: {
+          },
+        }}
+        renderScene={this.renderScene.bind(this)} />
     );
   }
 }

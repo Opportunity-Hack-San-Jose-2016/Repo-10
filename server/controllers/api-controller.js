@@ -13,21 +13,20 @@ exports.getListings = function(req, res){
 };
 
 exports.getListingById = function(req, res){
-	var listings = db.ref("listings");
 	l_id = req.params.id
+	var listings = db.ref("listings/" + l_id);
 	listings.once('value', function(snapshot){
 
 		data = snapshot.val() //listings table
-
-		if (l_id >= 0 && l_id < data.length){
-			listing_data = data[id]
-			res.json(listing_data)
+		if (data != undefined){
+			res.json(data)
 			res.status(200)
 		} else {
 			res.status(418)
 			res.json({
 				message:"I'm a teapot, short and stout. Your entity body tipped me over and poured me out.",
-				real_message:"Seriously your ID parameter was invalid. Pick a new one."
+				real_message:"Seriously your ID parameter wasn't found. Pick a new one.",
+				real_status: 404
 			})
 		}
 		res.send()

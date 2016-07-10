@@ -1,4 +1,11 @@
+<<<<<<< HEAD
+/Users/akshay/Documents/Programming/Repo-10/app/ios/build/Build/Intermediates/RCTWebSocket.build/Debug-iphonesimulator/RCTWebSocket.build/Objects-normal/x86_64/RCTSRWebSocket.o
+/Users/akshay/Documents/Programming/Repo-10/app/ios/build/Build/Intermediates/RCTWebSocket.build/Debug-iphonesimulator/RCTWebSocket.build/Objects-normal/x86_64/RCTWebSocketModule.o
+/Users/akshay/Documents/Programming/Repo-10/app/ios/build/Build/Intermediates/RCTWebSocket.build/Debug-iphonesimulator/RCTWebSocket.build/Objects-normal/x86_64/RCTWebSocketExecutor.o
+/Users/akshay/Documents/Programming/Repo-10/app/ios/build/Build/Intermediates/RCTWebSocket.build/Debug-iphonesimulator/RCTWebSocket.build/Objects-normal/x86_64/RCTWebSocketManager.o
+=======
 /Users/anuragbanerjee/Dropbox/Development/Repos/HelperUpper/app/ios/build/Build/Intermediates/RCTWebSocket.build/Debug-iphonesimulator/RCTWebSocket.build/Objects-normal/x86_64/RCTSRWebSocket.o
 /Users/anuragbanerjee/Dropbox/Development/Repos/HelperUpper/app/ios/build/Build/Intermediates/RCTWebSocket.build/Debug-iphonesimulator/RCTWebSocket.build/Objects-normal/x86_64/RCTWebSocketModule.o
 /Users/anuragbanerjee/Dropbox/Development/Repos/HelperUpper/app/ios/build/Build/Intermediates/RCTWebSocket.build/Debug-iphonesimulator/RCTWebSocket.build/Objects-normal/x86_64/RCTWebSocketExecutor.o
 /Users/anuragbanerjee/Dropbox/Development/Repos/HelperUpper/app/ios/build/Build/Intermediates/RCTWebSocket.build/Debug-iphonesimulator/RCTWebSocket.build/Objects-normal/x86_64/RCTWebSocketManager.o
+>>>>>>> origin/master

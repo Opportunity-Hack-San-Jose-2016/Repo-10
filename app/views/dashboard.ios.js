@@ -10,11 +10,13 @@ import {
   StyleSheet,
   Text,
   View,
-  ListView,
+  ListView
 } from 'react-native';
 
 const Firebase = require('../config/Firebase.js');
 const db = Firebase.database();
+
+const CustomComponents = require('../components');
 
 class Dashboard extends Component {
   constructor(props) {
@@ -22,45 +24,45 @@ class Dashboard extends Component {
     this.state = {
       dataSource: new ListView.DataSource({
         rowHasChanged: (row1, row2) => row1 !== row2,
-      }).cloneWithRows([])
+      }).cloneWithRows([
+        { 'name': 'Events', 'type': 'category', 'description': 'Have fun with family and friends!' },
+        { 'name': 'Event Map', 'type': 'category', 'description': 'View events near you!' },
+        { 'name': 'Jobs', 'type': 'category', 'description': 'Start getting a steady paycheck.' },
+        { 'name': 'Coupons', 'type': 'category', 'description': 'Save big money!' },
+        { 'name': 'Help', 'type': 'category', 'description': 'Find help paying basic life necessities.' }
+      ])
     };
     this.listings = db.ref("listings");
   }
 
-  componentDidMount () {
-    this.listings.on('value', (snap) => {
-      var result = [];
-      snap.forEach((child) => {
-        result.push({
-          title: child.val().name
-        });
-      })
-
-      this.setState({
-        dataSource: this.state.dataSource.cloneWithRows(result)
-      });
-    })
-  }
-
   _renderRow (item) {
-    return <Text>{item.title}</Text>;
+    return (
+      <CustomComponents.Category item={item} {...this.props} />
+    );
   }
 
   render() {
     return (
       <View style={{flex: 1, backgroundColor: 'white'}}>
+        <CustomComponents.SearchBar {...this.props} />
         <ListView
           dataSource={this.state.dataSource}
           renderRow={this._renderRow.bind(this)}
           enableEmptySections={true}
-          style={{flex: 1}} />
+          style={styles.listContainer} />
       </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
-})
+  listContainer: {
+    flex: 1,
+    borderRadius: 5,
+    paddingTop: 15,
+    paddingBottom: 50,
+  },
+});
 
 AppRegistry.registerComponent('Dashboard', () => Dashboard);
 

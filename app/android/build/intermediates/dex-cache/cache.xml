@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/akshay/Documents/Programming/Repo-10/app/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline/0.11.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="3341b66c54367e777a0647e2db96c045329bfeab">
+        <dex dex="/Users/akshay/Documents/Programming/Repo-10/app/android/app/build/intermediates/pre-dexed/debug/classes-9ad550c971c57c59f6bc544c271eecdbe49b4f91.jar" />
+    </item>
+    <item
+        jar="/Users/akshay/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.2.3/1a0113da2cab5f4c216b4e5e7c1dbfaa67087e14/jackson-core-2.2.3.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="1a0113da2cab5f4c216b4e5e7c1dbfaa67087e14">
+        <dex dex="/Users/akshay/Documents/Programming/Repo-10/app/android/app/build/intermediates/pre-dexed/debug/jackson-core-2.2.3-8abacb12b2ef9d194b643149c23f0f9d2c64e0f9.jar" />
+    </item>
+    <item
+        jar="/Users/akshay/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.2.0/f7873a2ebde246a45c2a8d6f3247108b4c88a879/okhttp-3.2.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="f7873a2ebde246a45c2a8d6f3247108b4c88a879">
+        <dex dex="/Users/akshay/Documents/Programming/Repo-10/app/android/app/build/intermediates/pre-dexed/debug/okhttp-3.2.0-5dca5388642699b2ac6f03fdd27d1b79df1a0a23.jar" />
+    </item>
+    <item
+        jar="/Users/akshay/Documents/Programming/Repo-10/app/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.29.0/jars/libs/infer-annotations-1.5.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="df2d16b25be8683063ce05d15192b62dce3f4890">
+        <dex dex="/Users/akshay/Documents/Programming/Repo-10/app/android/app/build/intermediates/pre-dexed/debug/infer-annotations-1.5-313607b5cfb4f180622f6778d74812524ff1d4ea.jar" />
+    </item>
+    <item
+        jar="/Users/akshay/Documents/Programming/Repo-10/app/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-okhttp3/0.11.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="2b8a01ad9da5d26d0067894c22e87597bca2c500">
+        <dex dex="/Users/akshay/Documents/Programming/Repo-10/app/android/app/build/intermediates/pre-dexed/debug/classes-30f42d7156b2fb99d5b0058daa3d53f23ee4c831.jar" />
+    </item>
+    <item
+        jar="/Users/akshay/Documents/Programming/Repo-10/app/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-base/0.11.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="ca63c521b5745ae9a09629d7ca67ff6bc2a967fe">
+        <dex dex="/Users/akshay/Documents/Programming/Repo-10/app/android/app/build/intermediates/pre-dexed/debug/classes-3f33ac3761d4057dc89ba562399e4e6ccbcfba90.jar" />
+    </item>
+    <item
+        jar="/Users/akshay/Documents/Programming/Repo-10/app/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.29.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="3d3b981aa5d57d8b9104a719b8879abcbbd7a91e">
+        <dex dex="/Users/akshay/Documents/Programming/Repo-10/app/android/app/build/intermediates/pre-dexed/debug/classes-1d5ec7632901f3886d86e392e65f035916a8a8b8.jar" />
+    </item>
+    <item
+        jar="/Users/akshay/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.4.0/d85884acf6810a3bbbecb587f239005cbc846dc4/bolts-tasks-1.4.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
+        <dex dex="/Users/akshay/Documents/Programming/Repo-10/app/android/app/build/intermediates/pre-dexed/debug/bolts-tasks-1.4.0-4b13d2c3b49f17c9cf13b8b6eb9e5a786984d12e.jar" />
+    </item>
+    <item
+        jar="/Users/akshay/Documents/Programming/Repo-10/app/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="/Users/akshay/Documents/Programming/Repo-10/app/android/app/build/intermediates/pre-dexed/debug/classes-f0c98657d37ab7055d450676e833da2511b5238b.jar" />
+    </item>
+    <item
+        jar="/Users/akshay/Documents/Programming/Repo-10/app/android/app/build/intermediates/exploded-aar/com.facebook.fresco/drawee/0.11.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="1137942adeb03984c1311b662363dd38fc238fd3">
+        <dex dex="/Users/akshay/Documents/Programming/Repo-10/app/android/app/build/intermediates/pre-dexed/debug/classes-cc92da5c95fec0e8caf986264c1674452a88113a.jar" />
+    </item>
+    <item
+        jar="/Users/akshay/Documents/Programming/Repo-10/app/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fresco/0.11.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d31aadf33187c37a7cd63dc1b769f8c6e33f78c3">
+        <dex dex="/Users/akshay/Documents/Programming/Repo-10/app/android/app/build/intermediates/pre-dexed/debug/classes-b0ff6b8616bbd6ac4965ee93ee783541bf9272f8.jar" />
+    </item>
+    <item
+        jar="/Users/akshay/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.8.0/5ea7af56cc7c567ed9856d99efb30740e9b17ff/okio-1.8.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="05ea7af56cc7c567ed9856d99efb30740e9b17ff">
+        <dex dex="/Users/akshay/Documents/Programming/Repo-10/app/android/app/build/intermediates/pre-dexed/debug/okio-1.8.0-f43a4019abc14ab8c93d29702ea724afc26e327f.jar" />
+    </item>
+    <item
+        jar="/Users/akshay/Documents/Programming/Repo-10/app/android/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="4356e230a981d1bbf047d848b91bc0d9b7c5bacc">
+        <dex dex="/Users/akshay/Documents/Programming/Repo-10/app/android/app/build/intermediates/pre-dexed/debug/classes-14e612ecc33acab04fee9774871e1673fa38cd65.jar" />
+    </item>
+    <item
+        jar="/Users/akshay/Documents/Programming/Repo-10/app/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.1/jars/libs/internal_impl-23.2.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="607a3d0b8013b4ccbfeb0b7cb293351994e021fb">
+        <dex dex="/Users/akshay/Documents/Programming/Repo-10/app/android/app/build/intermediates/pre-dexed/debug/internal_impl-23.2.1-b55231ec3bb9cf98b6a0e6c1244b790ea2a20b1e.jar" />
+    </item>
+    <item
+        jar="/Users/akshay/Documents/Programming/Repo-10/app/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="3be474b1b21b31cf2fa93fe6bd641ae108d96452">
+        <dex dex="/Users/akshay/Documents/Programming/Repo-10/app/android/app/build/intermediates/pre-dexed/debug/classes-0b5601787f684a3da39ddcd3687a86ab8d8a1366.jar" />
+    </item>
+    <item
+        jar="/Users/akshay/Documents/Programming/Repo-10/app/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fbcore/0.11.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="98786c1770b531b9194fb6448b2a2692c64074b6">
+        <dex dex="/Users/akshay/Documents/Programming/Repo-10/app/android/app/build/intermediates/pre-dexed/debug/classes-2b56be9d44b7cba0b884988a9b3634fa92ad6b6d.jar" />
+    </item>
+    <item
+        jar="/Users/akshay/.gradle/caches/modules-2/files-2.1/com.nineoldandroids/library/2.4.0/e9b63380f3a242dbdbf103a2355ad7e43bad17cb/library-2.4.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb">
+        <dex dex="/Users/akshay/Documents/Programming/Repo-10/app/android/app/build/intermediates/pre-dexed/debug/library-2.4.0-5e3ccc7d73a9088639ea4b508f50c4d1dc28ef37.jar" />
+    </item>
+    <item
+        jar="/Users/akshay/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.0/5871fb60dc68d67da54a663c3fd636a10a532948/jsr305-3.0.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="5871fb60dc68d67da54a663c3fd636a10a532948">
+        <dex dex="/Users/akshay/Documents/Programming/Repo-10/app/android/app/build/intermediates/pre-dexed/debug/jsr305-3.0.0-d46a56071bca7e53a1e4fac7008594ac60ea9e34.jar" />
+    </item>
+    <item
+        jar="/Users/akshay/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-urlconnection/3.2.0/6f8a4b1435c9e0a6f9c5fe4a1be46627b848fd0c/okhttp-urlconnection-3.2.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="6f8a4b1435c9e0a6f9c5fe4a1be46627b848fd0c">
+        <dex dex="/Users/akshay/Documents/Programming/Repo-10/app/android/app/build/intermediates/pre-dexed/debug/okhttp-urlconnection-3.2.0-c78057e3ded3ce4b24f15302144d344194308121.jar" />
+    </item>
+    <item
+        jar="/Users/akshay/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-ws/3.2.0/1ea229d6984444c8c58b8e97ba4c8429d9d135b3/okhttp-ws-3.2.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="1ea229d6984444c8c58b8e97ba4c8429d9d135b3">
+        <dex dex="/Users/akshay/Documents/Programming/Repo-10/app/android/app/build/intermediates/pre-dexed/debug/okhttp-ws-3.2.0-43e95808e53f06b77334486920e7d1cd45dfb873.jar" />
+    </item>
+    <item
+        jar="/Users/akshay/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.2.1/support-annotations-23.2.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="ccb693bc0774fcb637246f7360de25b4af7df318">
+        <dex dex="/Users/akshay/Documents/Programming/Repo-10/app/android/app/build/intermediates/pre-dexed/debug/support-annotations-23.2.1-077f24bde46ed3ad352e75898593bfd40fbeabe7.jar" />
+    </item>
+
+</items>

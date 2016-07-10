@@ -8,11 +8,12 @@ listing = {
 	"score": {
 		"type":"number"
 	},
-	"time": {
-		"type": "unix-timestamp"
+	time: {
+		startTime: unix-timestamp,
+		endTime: unix-timestamp
 	},
-	type: {
-		type: string
+	"type": {
+		"type": "string"
 	},
 	location: {
 		latitude: {
@@ -21,5 +22,11 @@ listing = {
 		longitude: {
 			type:number
 		}
+	},
+	owner: {
+		type: string
+	},
+	description: {
+		type: string
 	}
 }

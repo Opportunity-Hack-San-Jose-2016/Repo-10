@@ -20,30 +20,21 @@ class ListingDetailCoupon extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      dataSource: new ListView.DataSource({
-        rowHasChanged: (row1, row2) => row1 !== row2,
-      }).cloneWithRows([])
+        listing: props
     };
-    this.listings = db.ref("listings");
   }
 
   componentDidMount () {
-    this.listings.on('value', (snap) => {
-      var result = [];
-      snap.forEach((child) => {
-        result.push({
-          title: child.val().name
-        });
-      })
-
+    //   let response = await fetch("http://192.168.84.183:8080/api/v1/reviews/listing/1" + this.state.listing.key());
+      let response = await fetch("http://192.168.85.118:8080/api/v1/reviews/listing/1");
+      let responseJson = await response.json();
       this.setState({
-        dataSource: this.state.dataSource.cloneWithRows(result)
+        dataSource: this.state.dataSource.cloneWithRows(responseJson)
       });
-    })
   }
 
   _renderRow (item) {
-    return <Text>{item.title}</Text>;
+    return <Text style={styles.ratingText}>{item.rating}</Text><Text>{item.review_text}</Text>;
   }
 
   render() {

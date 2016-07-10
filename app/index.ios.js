@@ -13,6 +13,7 @@ import {
   ListView,
   StatusBar,
   Navigator,
+  BackAndroid,
 } from 'react-native';
 
 const Firebase = require('./config/Firebase.js');
@@ -40,6 +41,7 @@ class HelperUpper extends Component {
         <View style={{flex: 1}}>
           <StatusBar
             barStyle="default"
+            barStyle="light-content"
             {...route.statusBar}
           />
 

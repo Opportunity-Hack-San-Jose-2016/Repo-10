@@ -29,7 +29,7 @@ class ListingTable extends Component {
   }
 
   componentDidMount () {
-    fetch("http://192.168.84.183:8080/api/v1/listings/type/" + this.props.type.toLowerCase())
+    fetch("http://192.168.85.118:8080/api/v1/listings/type/" + this.props.type.toLowerCase())
       .then((res) => res.json())
       .then((resJSON) => {
         console.log(resJSON);

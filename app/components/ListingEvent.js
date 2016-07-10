@@ -13,8 +13,6 @@ import {
   Image,
 } from 'react-native';
 
-import MapView from 'react-native-maps';
-
 class ListingEvent extends Component {
   render() {
     return (

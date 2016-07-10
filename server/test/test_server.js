@@ -75,4 +75,12 @@ describe('test suite for server.js', function(done){
 			done();
 		});
 	});
+
+	it('GETs an search query at the API endpoint: /api/v1/listings/search/:keywords', function (done) {
+		query = "graceful a";
+		request(server).get('/api/v1/listings/search/' + encodeURI(query)).end(function(err,res){
+			assert.isTrue(res.body.length > 0, 'no entries found');
+			done();
+		});
+	});
 })

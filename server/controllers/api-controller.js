@@ -173,6 +173,67 @@ exports.updateReviewById = function(req, res){
 
 }
 
+// API Endpoint - GET /api/v1/listings/search/:keywords
+exports.searchListings = function(req, res) {
+	var terms = req.params.keywords;
+	terms = terms.toLowerCase();
+	var arr = terms.split(" ");
+	var result = [];
+	var listings = db.ref("listings");
+	if (!arr.length) {
+		res.json([]);
+		return;
+	}
+
+	listings.once("value", function (snapshot) {
+		var data = snapshot.val();
+		for (var key in data) {
+			if (data.hasOwnProperty(key)) {
+				var entry = data[key];
+	            var count = getNumOccurences(arr[0], entry.name);
+				if (count > 0) {
+					var toPush = {"score" : count, data: entry};
+					result.push(toPush);
+				}
+			}
+		}
+		for (var i = 1; i < arr.length; i++) {
+			var keyword = arr[i];
+			for (var j = 0; j < result.length; j++) {
+				var count = getNumOccurences(keyword, result[j].data.name);
+				if (count <= 0) {
+					result.splice(j, 1);
+					j--;
+				} else {
+					result[j].score += count;
+				}
+			}
+		}
+
+		result.sort(function(x, y) {
+			return x.score > y.score;
+		});
+		res.status(200);
+		res.json(result);
+	});
+};
+
+function getNumOccurences(substring, string) {
+	string = string.toLowerCase();
+	substring = substring.toLowerCase();
+	var res = 0;
+	var index = string.indexOf(substring);
+	while (index != -1) {
+		string = string.slice(index + substring.length, string.length);
+		res++;
+		index = string.indexOf(substring);
+	}
+
+	return res;
+}
+
+
+
 // API Endpoint GET /api/v1/listings/nearby/:distance
 
 //( 3959 * acos( cos( radians(37) ) * cos( radians( INPUT_LATITUDE ) ) * cos( radians( INPUT_LONGITUDE ) - radians(MY_LONGITUDE) ) + sin(radians(MY_LATITUDE) ) * sin( radians(INPUT_LATITUDE) )))

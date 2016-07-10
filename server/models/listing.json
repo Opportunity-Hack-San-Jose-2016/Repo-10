@@ -1,0 +1,17 @@
+listing = {
+	name:{
+		type:string
+	},
+	reviews: {
+		type:number_array
+	},
+	score: {
+		type:number
+	},
+	time: {
+		type: unix-timestamp
+	},
+	type: {
+		type: string
+	}
+}

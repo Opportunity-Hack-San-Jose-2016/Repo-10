@@ -13,5 +13,13 @@ listing = {
 	},
 	type: {
 		type: string
+	},
+	location: {
+		latitude: {
+			type: number
+		},
+		longitude: {
+			type:number
+		}
 	}
 }

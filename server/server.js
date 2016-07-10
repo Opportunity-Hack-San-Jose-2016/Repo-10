@@ -72,6 +72,10 @@ function verifyRequestSignature(req, res, buf) {
 var api = require('./controllers/api-controller.js')
 router.route('/listings/:id')
 	.get(api.getListingById);
+router.route('/listings/type/:type')
+	.get(api.getListingByType);
+router.route('/listings/nearby/:distance')
+	.get(api.getListingsNearby);
 router.route('/listings')
 	.get(api.getListings);
 

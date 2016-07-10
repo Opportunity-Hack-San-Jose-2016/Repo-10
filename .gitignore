@@ -41,3 +41,7 @@ app/buck-out/
 app/\.buckd/
 app/android/app/libs
 app/android/keystores/debug.keystore
+
+# Firebase
+app/config/credentials.json
+server/config/credentials.json

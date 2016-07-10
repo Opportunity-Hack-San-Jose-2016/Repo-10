@@ -13,6 +13,7 @@ import {
   ListView,
   StatusBar,
   Navigator,
+  BackAndroid,
 } from 'react-native';
 
 const Firebase = require('./config/Firebase.js');

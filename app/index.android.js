@@ -13,6 +13,7 @@ import {
   ListView,
   StatusBar,
   Navigator,
+  BackAndroid,
 } from 'react-native';
 
 const Firebase = require('./config/Firebase.js');
@@ -30,9 +31,14 @@ class HelperUpper extends Component {
       }).cloneWithRows([])
     };
     this.listings = db.ref("listings");
+    BackAndroid.addEventListener('hardwareBackPress', () => {
+     this.navigator.pop();
+     return true;
+    });
   }
 
   renderScene(route, navigator) {
+    this.navigator = navigator;
     if (route.component == 'inline') {
       return route.payload
     } else {

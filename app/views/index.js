@@ -1,5 +1,5 @@
 module.exports = {
   'Dashboard': require('./dashboard.ios.js'),
-  "ListingTable": require('./listingTable.ios.js'),
+  "ListingTable": require('./ListingTable.ios.js'),
   "Dummy": require('./Dummy.js'),
 };

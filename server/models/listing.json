@@ -11,8 +11,8 @@ listing = {
 	"time": {
 		"type": "unix-timestamp"
 	},
-	type: {
-		type: string
+	"type": {
+		"type": "string"
 	},
 	location: {
 		latitude: {

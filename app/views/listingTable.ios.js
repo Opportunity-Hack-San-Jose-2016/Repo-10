@@ -32,7 +32,6 @@ class ListingTable extends Component {
     fetch("http://b35afecc.ngrok.io/api/v1/listings/type/" + this.props.type.toLowerCase())
       .then((res) => res.json())
       .then((resJSON) => {
-        console.log(resJSON);
         this.setState({
           dataSource: this.state.dataSource.cloneWithRows(resJSON)
         });

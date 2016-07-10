@@ -5,7 +5,6 @@ const firebase = Firebase.initializeApp({
   authDomain: "helperupper.firebaseapp.com",
   databaseURL: "https://helperupper.firebaseio.com",
   storageBucket: "helperupper.appspot.com",
-  // serviceAccount: JSON.parse(process.env.CREDENTIALS) || "./config/credentials.json"
   serviceAccount: "./config/credentials.json"
 });
 

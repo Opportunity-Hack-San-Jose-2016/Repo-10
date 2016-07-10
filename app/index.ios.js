@@ -18,7 +18,7 @@ import {
 const Firebase = require('./config/Firebase.js');
 const db = Firebase.database();
 
-// const component = require('./components/index.js');
+const component = require('./components/index.js');
 const view = require('./views/index.js');
 
 class HelperUpper extends Component {

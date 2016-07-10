@@ -1,0 +1,12 @@
+review = {
+	listing_id: {
+		type:string
+	},
+	review_text: {
+		type:string
+	},
+	rating: {
+		type: Number
+	}
+	
+}

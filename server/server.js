@@ -2,10 +2,10 @@
 var express    = require('express');
 var bodyParser = require('body-parser');
 var app        = express();
-var config = require('config');
-var crypto = require('crypto');
-var  https = require('https');
-var request = require('request');
+var config     = require('config');
+var crypto     = require('crypto');
+var https      = require('https');
+var request    = require('request');
 
 const HASH = config.get("hash");
 
@@ -43,7 +43,7 @@ app.use("/styles",  express.static(__dirname + '/styles'));
 app.use("/js", express.static(__dirname + '/js'));
 app.use("/images",  express.static(__dirname + '/images'));
 
-app.get('/',function(req,res){
+app.get('/', function(req,res){
 	res.sendfile(path.join(__dirname + '/index.html'));
 });
 
@@ -68,9 +68,6 @@ function verifyRequestSignature(req, res, buf) {
     }
   }
 }
-
-
-
 
 router.route('/listings/:id')
 	.get(function(req, res){
@@ -107,7 +104,6 @@ router.route('/listings')
 	});
 
 var reviews = db.ref("reviews");
-
 
 router.route('/reviews')
 	.post(function(req, res){
@@ -176,9 +172,7 @@ router.route('/reviews/id/:review_id')
 	
 	});
 
-
 app.use('/api/v1', router);
-
 
 // START THE SERVER
 // =============================================================================

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>WorkspacePath</key>
+<<<<<<< HEAD
+	<string>/Users/akshay/Documents/Programming/Repo-10/app/ios/HelperUpper.xcodeproj</string>
+=======
+	<string>/Users/anuragbanerjee/Dropbox/Development/Repos/HelperUpper/app/ios/HelperUpper.xcodeproj</string>
+>>>>>>> origin/master
+</dict>
+</plist>

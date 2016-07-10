@@ -16,6 +16,8 @@ import {
 const Firebase = require('../config/Firebase.js');
 const db = Firebase.database();
 
+const CustomComponents = require('../components');
+
 class Dashboard extends Component {
   constructor(props) {
     super(props);
@@ -49,6 +51,7 @@ class Dashboard extends Component {
   render() {
     return (
       <View style={{flex: 1, backgroundColor: 'white'}}>
+        {React.createElement(CustomComponents.TopBar)}
         <ListView
           dataSource={this.state.dataSource}
           renderRow={this._renderRow.bind(this)}

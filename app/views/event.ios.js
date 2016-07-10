@@ -16,7 +16,7 @@ import {
 const Firebase = require('./config/Firebase.js');
 const db = Firebase.database();
 
-class HelperUpper_Event extends Component {
+class ListingDetailEvent extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -62,4 +62,4 @@ class HelperUpper_Event extends Component {
 const styles = StyleSheet.create({
 })
 
-AppRegistry.registerComponent('HelperUpper_Event', () => HelperUpper_Event);
+AppRegistry.registerComponent('ListingDetailEvent', () => ListingDetailEvent);

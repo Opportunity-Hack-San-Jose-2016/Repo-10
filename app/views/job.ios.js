@@ -16,7 +16,7 @@ import {
 const Firebase = require('./config/Firebase.js');
 const db = Firebase.database();
 
-class HelperUpper_Job extends Component {
+class ListingDetailJob extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -62,4 +62,4 @@ class HelperUpper_Job extends Component {
 const styles = StyleSheet.create({
 })
 
-AppRegistry.registerComponent('HelperUpper_Job', () => HelperUpper_Job);
+AppRegistry.registerComponent('ListingDetailJob', () => ListingDetailJob);

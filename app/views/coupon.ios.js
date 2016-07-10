@@ -16,7 +16,7 @@ import {
 const Firebase = require('./config/Firebase.js');
 const db = Firebase.database();
 
-class HelperUpper_Coupon extends Component {
+class ListingDetailCoupon extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -62,4 +62,4 @@ class HelperUpper_Coupon extends Component {
 const styles = StyleSheet.create({
 })
 
-AppRegistry.registerComponent('HelperUpper_', () => HelperUpper_Coupon);
+AppRegistry.registerComponent('ListingDetailCoupon', () => ListingDetailCoupon);

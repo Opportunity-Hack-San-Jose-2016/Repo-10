@@ -29,6 +29,22 @@ describe('test suite for server.js', function(done){
 			done();
 		});
 	});
+	it('GETs an existing ID at the API endpoint: /api/v1/listings/type/:type', function(done){
+		id = 'job'
+		request(server).get('/api/v1/listings/type/' + id).end(function(err, res){
+			assert.equal(res.status, 200, 'Status was not 200 OK')
+			assert.isTrue(data.length > 0, 'There was no data present under listings/id')
+			done();
+		});
+	});
+	it('GETs a non-existing ID at the API endpoint: /api/v1/listings/type/:type', function(done){
+		id = '12345678wehavukeyfbhksjd'
+		request(server).get('/api/v1/listings/type/' + id).end(function(err, res){
+			assert.equal(res.status, 200, 'Status was not 200 OK')
+			assert.isTrue(data.length == 0, 'There was no data present under listings/id')
+			done();
+		});
+	});
 
 	it('GETs an existing ID at the API endpoint: /api/v1/reviews/id/:id', function(done){
 		id = 2

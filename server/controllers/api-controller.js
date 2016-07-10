@@ -2,6 +2,8 @@
 const Firebase = require('../config/Firebase.js');
 const db = Firebase.database();
 
+
+// API Endpoint - GET /api/v1/listings
 exports.getListings = function(req, res){
 	var listings = db.ref("listings");
 	listings.once('value', function(snapshot){
@@ -12,6 +14,7 @@ exports.getListings = function(req, res){
 	});
 };
 
+// API Endpoint - GET /api/v1/listings/id/:id
 exports.getListingById = function(req, res){
 	l_id = req.params.id
 	var listings = db.ref("listings/" + l_id);
@@ -33,15 +36,29 @@ exports.getListingById = function(req, res){
 	})
 }
 
+// API Endpoint - GET /api/v1/listings/type/:type
+exports.getListingByType = function(req, res) {
+	var listings = db.ref("listings")
+	listings.orderByChild('type').equalTo(req.params.type).once('value', function(snapshot){
+		data = snapshot.val();
+		if(data == null){
+			data = []
+		}
+		res.json(data);
+		res.status(200);
+		res.send();
+	});
+}
+
 
 var reviews = db.ref("reviews");
 
+// API Endpoint - POST /api/v1/reviews
 exports.postReview = function(req, res){
 	var review = {};
 	review.review_text = req.body.review_text;
 	review.rating = req.body.rating;
 	review.listing_id = req.body.listing_id;
-	console.log(review)
 	var listref = db.ref("listings/" + review.listing_id + "/reviews");
 	reviews.once("value", function(snapshot) {
 		var index = snapshot.val().length;
@@ -50,7 +67,8 @@ exports.postReview = function(req, res){
 		res.send();
 	})
 }
-	
+
+// API Endpoint - GET /api/v1/reviews/listing/:listing_id
 exports.getReviewByListing = function(req, res){
 	var listing_id = req.params.listing_id;
 	var listing = db.ref('listings')
@@ -82,6 +100,7 @@ exports.getReviewByListing = function(req, res){
 	})
 }
 	
+// API Endpoint - GET /api/v1/reviews/id/:id
 exports.getReviewById = function(req, res){
 	var review_id = req.params.review_id;
 	reviews.once("value", function (snapshot) {
@@ -92,6 +111,8 @@ exports.getReviewById = function(req, res){
 	})
 }
 	
+
+// API Endpoint - PUT /api/v1/reviews/id/:id
 exports.updateReviewById = function(req, res){
 	var review_id = req.params.review_id;
 	var review = db.ref("reviews/" + review_id);

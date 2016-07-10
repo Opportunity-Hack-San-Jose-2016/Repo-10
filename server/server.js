@@ -32,7 +32,6 @@ router.use(function(req, res, next) {
 	res.header("Access-Control-Allow-Origin", "*");
 	res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
   	res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-	console.log('API Being Accessed');
 	next();
 });
 
@@ -70,13 +69,41 @@ function verifyRequestSignature(req, res, buf) {
   }
 }
 
+
+
+
 router.route('/listings/:id')
 	.get(function(req, res){
-	
+		var listings = db.ref("listings");
+		l_id = req.params.id
+		listings.once('value', function(snapshot){
+    		
+			data = snapshot.val() //listings table
+			
+			if (l_id >= 0 && l_id < data.length){
+				listing_data = data[id]
+				res.json(listing_data)
+				res.status(200)
+			} else {
+				res.status(418)
+				res.json({
+					message:"I'm a teapot, short and stout. Your entity body tipped me over and poured me out.",
+					real_message:"Seriously your ID parameter was invalid. Pick a new one."
+				})
+			}
+			res.send()
+		});
 	});
+
 router.route('/listings')
 	.get(function(req, res){
-		res.send();
+		var listings = db.ref("listings");
+		listings.once('value', function(snapshot){
+			data = snapshot.val();
+			res.json(data);
+			res.status(200);
+			res.send();
+		});
 	});
 
 var reviews = db.ref("reviews");
@@ -153,10 +180,9 @@ router.route('/reviews/id/:review_id')
 app.use('/api/v1', router);
 
 
-
-
-
 // START THE SERVER
 // =============================================================================
-app.listen(port);
+var server = app.listen(port);
 console.log('Server on: ' + port);
+
+module.exports = server

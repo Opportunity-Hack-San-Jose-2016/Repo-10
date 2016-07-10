@@ -1,5 +1,6 @@
 
 const Firebase = require('../config/Firebase.js');
+var math = require('mathjs');
 const db = Firebase.database();
 
 
@@ -48,6 +49,53 @@ exports.getListingByType = function(req, res) {
 		res.status(200);
 		res.send();
 	});
+}
+
+
+// API Endpoint GET /api/v1/listings/nearby/:distance?lat=&lng=
+exports.getListingsNearby = function(req, res) {
+	var listings = db.ref("listings")
+	lat = req.query.lat
+	lng = req.query.lng
+	if(lat == null || lng == null || req.params.distance == null) {
+		res.status(400)
+		res.json({message:"Missing latitude, longitude, or miles parameters"})
+		res.send();
+	} else {
+		origin = {}
+		origin.lat = lat
+		origin.lng = lng
+		listings.once('value', function(snapshot){
+			data = snapshot.val();
+			nearby_listings = []
+			for (entry in data) {
+				if (data[entry].location != null) {
+					if (isWithinMiles(origin, data[entry].location, req.params.distance)) {
+						nearby_listings.push(data[entry]);
+					}	
+				}
+				
+			}
+			res.json(nearby_listings);
+			res.status(200);
+			res.send();
+		});
+	}
+}
+
+function isWithinMiles(origin, other, dist_miles) {
+
+	num =  math.cos( toRads(origin.lat) ) * math.cos( toRads( other.lat ) ) * math.cos( toRads( other.lng ) - toRads(origin.lng) ) + math.sin( toRads(origin.lat) ) * math.sin( toRads( other.lat ) )
+	distance = ( 3959 * math.acos( num ) )
+
+//	if(distance <= dist_miles){
+//		console.log(other.lat + ', ' + other.lng)
+//	}
+	return distance <= dist_miles
+}
+
+function toRads(num) {
+	return (num * math.pi) / 180
 }
 
 
@@ -125,6 +173,10 @@ exports.updateReviewById = function(req, res){
 	res.send();
 
 }
+
+// API Endpoint GET /api/v1/listings/nearby/:distance
+
+//( 3959 * acos( cos( radians(37) ) * cos( radians( INPUT_LATITUDE ) ) * cos( radians( INPUT_LONGITUDE ) - radians(MY_LONGITUDE) ) + sin(radians(MY_LATITUDE) ) * sin( radians(INPUT_LATITUDE) )))
 	
 	
 	

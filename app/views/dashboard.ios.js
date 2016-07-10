@@ -29,7 +29,7 @@ class Dashboard extends Component {
         { 'name': 'Event Map', 'type': 'category', 'description': 'View events near you!' },
         { 'name': 'Jobs', 'type': 'category', 'description': 'Start getting a steady paycheck.' },
         { 'name': 'Coupons', 'type': 'category', 'description': 'Save big money!' },
-        { 'name': 'Help', 'type': 'category', 'description': 'Find help paying rent, food, and other life necessities.' }
+        { 'name': 'Help', 'type': 'category', 'description': 'Find help paying basic life necessities.' }
       ])
     };
     this.listings = db.ref("listings");

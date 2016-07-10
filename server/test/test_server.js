@@ -29,4 +29,24 @@ describe('test suite for server.js', function(done){
 			done();
 		});
 	});
+
+	it('GETs an existing ID at the API endpoint: /api/v1/reviews/id/:id', function(done){
+		id = 2
+		request(server).get('/api/v1/reviews/id/' + id).end(function(err, res){
+			assert.equal(res.status, 200, 'Status was not 200 OK')
+			assert.isTrue(res.body.listing_id != null, 'listing_id was null')
+			assert.isTrue(res.body.rating != null, 'rating shouldn\'t have been null')
+			assert.isTrue(res.body.review_text != null, 'review_text should not be null')
+			done();
+		});
+	});
+
+	it('GETs an existing ID at the API endpoint: /api/v1/reviews/listing/:id', function(done){
+		id = 2
+		request(server).get('/api/v1/reviews/listing/' + id).end(function(err, res){
+			assert.equal(res.status, 200, 'Status was not 200 OK')
+			assert.isTrue(res.body.length != 0, 'no entries found')
+			done();
+		});
+	});
 })

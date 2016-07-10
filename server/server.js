@@ -127,9 +127,10 @@ router.route('/reviews')
 
 router.route('/reviews/listing/:listing_id')
 	.get(function(req, res){
+		var listings = db.ref("listings");
 		var listing_id = req.params.listing_id;
-		listing.once("value", function (snapshot){
-			var data = snapshot.value();
+		listings.once("value", function (snapshot){
+			var data = snapshot.val();
 			if (listing_id > data.length || listing_id < 0) {
 		    	res.status(418);
 		    	res.json({"message": "invalid"});
@@ -139,7 +140,7 @@ router.route('/reviews/listing/:listing_id')
 
 	    	var listrevs = data[listing_id].reviews;
 	    	reviews.once("value", function(rsnapshot) {
-	    		var revData = rsnapshot.value();
+	    		var revData = rsnapshot.val();
 			    var result = [];
 			    for (var i = 0; i < listrevs.length; i++) {
 		    		result.push(revData[listrevs[i]]);
@@ -157,7 +158,6 @@ router.route('/reviews/id/:review_id')
 		var review_id = req.params.review_id;
 		reviews.once("value", function (snapshot) {
 			var result = snapshot.val()[review_id];
-		    console.log(result);
 			res.status(200);
 			res.json(result);
 			res.send();

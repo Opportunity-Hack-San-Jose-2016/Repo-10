@@ -109,12 +109,10 @@ exports.postReview = function(req, res){
 	review.listing_id = req.body.listing_id;
 	var listref = db.ref("listings/" + review.listing_id + "/reviews");
 	var reviews = db.ref("reviews");
-	reviews.once("value", function(snapshot) {
-		var index = snapshot.val().length;
-		listref.push(reviews.push(review).key);
-		res.status(200);
-		res.send();
-	})
+	listref.push(reviews.push(review).key);
+	res.status(200);
+	res.send();
+	
 }
 
 // API Endpoint - GET /api/v1/reviews/listing/:listing_id

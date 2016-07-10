@@ -25,7 +25,8 @@ class ListingDetailCoupon extends Component {
   }
 
   componentDidMount () {
-      let response = await fetch("http://localhost:8080/reviews/listing/" + this.state.listing.key);
+    //   let response = await fetch("http://192.168.84.183:8080/api/v1/reviews/listing/1" + this.state.listing.key());
+      let response = await fetch("http://192.168.84.183:8080/api/v1/reviews/listing/1");
       let responseJson = await response.json();
       this.setState({
         dataSource: this.state.dataSource.cloneWithRows(responseJson)

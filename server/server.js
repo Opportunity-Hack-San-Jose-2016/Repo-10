@@ -79,32 +79,59 @@ router.route('/listings')
 	
 	});
 
+var reviews = db.ref("reviews");
+
+
 router.route('/reviews')
 	.post(function(req, res){
-	
+		var review = {};
+		review.review_text = req.params.review_text;
+		review.rating = req.params.rating;
+		review.listing_id = req.params.listing_id;
+		reviews.push(review);
+		res.status(200);
+		res.send();
 	
 	});
 
 router.route('/reviews/listing/:listing_id')
 	.get(function(req, res){
-	
-	
+		var listing_id = req.params.listing_id;
+	    var data = listings.val();
+	    var revData = reviews.val();
+	    if (listing_id > data.length || listing_id < 0) {
+	    	res.status(418);
+	    	res.json({"message": "invalid"})
+	    	res.send();
+	    }
+	    var listrevs = data[listing_id].reviews;
+	    var result = [];
+	    for (var i = 0; i < listrevs.length; i++) {
+    		result.push(revData[listrevs[i]]);
+	    }
+	    res.status(200);
+	    res.json = result;
+	    res.send();
 	})
 
 router.route('/reviews/id/:review_id')
 	.get(function(req, res){
+		var review_id = req.params.review_id;
+		var result = reviews.val()[review_id];
+		res.status(200);
+		res.json = result;
+		res.send();
 		
-	
 	})
 	.put(function(req, res){
-	
+		var review_id = req.params.review_id;
+
+		reviews[review_id].review_text = req.params.review_text? req.params.review_text: reviews[review_id].review_text;
+		reviews[review_id].rating = req.params.rating? req.params.rating: reviews[review_id].rating;
+		res.status(200);
+		res.send();
 	
 	});
-
-
-
-
-
 
 
 app.use('/api/v1', router);

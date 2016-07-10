@@ -1,5 +1,6 @@
 module.exports = {
-  'TopBar': require('./TopBar.js'),
+  'TopBar': require('./SearchBar.js'),
+  'SearchBar': require('./SearchBar.js'),
   'Listing': require('./Listing.js'),
   'ListingEvent': require('./ListingEvent.js'),
   'ListingHelp': require('./ListingHelp.js'),

@@ -44,7 +44,7 @@ class Dashboard extends Component {
   render() {
     return (
       <View style={{flex: 1, backgroundColor: 'white'}}>
-        <CustomComponents.TopBar />
+        <CustomComponents.SearchBar {...this.props} />
         <ListView
           dataSource={this.state.dataSource}
           renderRow={this._renderRow.bind(this)}

@@ -126,18 +126,18 @@ exports.postReview = function(req, res){
 	review.rating = req.body.rating;
 	review.listing_id = req.body.listing_id;
 	var listref = db.ref("listings/" + review.listing_id + "/reviews");
-	reviews.once("value", function(snapshot) {
-		var index = snapshot.val().length;
-		listref.push(reviews.push(review).key);
-		res.status(200);
-		res.send();
-	})
+	var reviews = db.ref("reviews");
+	listref.push(reviews.push(review).key);
+	res.status(200);
+	res.send();
+	
 }
 
 // API Endpoint - GET /api/v1/reviews/listing/:listing_id
 exports.getReviewByListing = function(req, res){
 	var listing_id = req.params.listing_id;
-	var listing = db.ref('listings')
+	var listing = db.ref('listings');
+	var reviews = db.ref("reviews");
 	listing.once("value", function (snapshot){
 		var data = snapshot.val();
 		if (listing_id > data.length || listing_id < 0) {
@@ -167,11 +167,10 @@ exports.getReviewByListing = function(req, res){
 // API Endpoint - GET /api/v1/reviews/id/:id
 exports.getReviewById = function(req, res){
 	var review_id = req.params.review_id;
-	reviews.once("value", function (snapshot) {
-		var result = snapshot.val()[review_id];
+	db.ref("reviews/" + review_id).once("value", function (snapshot) {
 		res.status(200);
-		res.json(result);
-	})
+		res.json(snapshot.val());
+	});
 }
 	
 

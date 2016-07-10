@@ -1,6 +1,11 @@
 dependencies: \
+<<<<<<< HEAD
+  /Users/akshay/Documents/Programming/Repo-10/app/node_modules/react-native/Libraries/Text/RCTTextField.m \
+  /Users/akshay/Documents/Programming/Repo-10/app/node_modules/react-native/Libraries/Text/RCTTextField.h \
+=======
   /Users/anuragbanerjee/Dropbox/Development/Repos/HelperUpper/app/node_modules/react-native/Libraries/Text/RCTTextField.m \
   /Users/anuragbanerjee/Dropbox/Development/Repos/HelperUpper/app/node_modules/react-native/Libraries/Text/RCTTextField.h \
+>>>>>>> origin/master
   ../../React/Views/RCTComponent.h ../../React/Base/RCTConvert.h \
   ../../React/Layout/Layout.h ../../React/Views/RCTAnimationType.h \
   ../../React/Views/RCTBorderStyle.h \

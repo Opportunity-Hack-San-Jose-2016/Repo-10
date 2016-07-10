@@ -23,11 +23,13 @@
     "crypto": "*",
     "express": "*",
     "firebase": "^3.1.0",
+    "mathjs": "^3.3.0",
     "mocha": "^2.5.3",
     "node-parse-api": "*",
     "request": "*"
   },
   "devDependencies": {
-    "coveralls": "^2.11.9"
+    "coveralls": "^2.11.9",
+    "supertest": "^1.2.0"
   }
 }

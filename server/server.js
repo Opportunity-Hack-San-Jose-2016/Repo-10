@@ -32,7 +32,6 @@ router.use(function(req, res, next) {
 	res.header("Access-Control-Allow-Origin", "*");
 	res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
   	res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-	console.log('API Being Accessed');
 	next();
 });
 
@@ -44,7 +43,7 @@ app.use("/styles",  express.static(__dirname + '/styles'));
 app.use("/js", express.static(__dirname + '/js'));
 app.use("/images",  express.static(__dirname + '/images'));
 
-app.get('/',function(req,res){
+app.get('/', function(req,res){
 	res.sendfile(path.join(__dirname + '/index.html'));
 });
 
@@ -70,14 +69,34 @@ function verifyRequestSignature(req, res, buf) {
   }
 }
 
+var api = require('./controllers/api-controller.js')
+router.route('/listings/:id')
+	.get(api.getListingById);
+router.route('/listings/type/:type')
+	.get(api.getListingByType);
+router.route('/listings/nearby/:distance')
+	.get(api.getListingsNearby);
+router.route('/listings')
+	.get(api.getListings)
+	.post(api.postListing);
+router.route('/listings/search/:keywords')
+	.get(api.searchListings);
 
-app.use('/api', router);
+var reviews = db.ref("reviews");
 
+router.route('/reviews')
+	.post(api.postReview);
+router.route('/reviews/listing/:listing_id')
+	.get(api.getReviewByListing)
+router.route('/reviews/id/:review_id')
+	.get(api.getReviewById)
+	.put(api.updateReviewById);
 
-
-
+app.use('/api/v1', router);
 
 // START THE SERVER
 // =============================================================================
-app.listen(port);
+var server = app.listen(port);
 console.log('Server on: ' + port);
+
+module.exports = server

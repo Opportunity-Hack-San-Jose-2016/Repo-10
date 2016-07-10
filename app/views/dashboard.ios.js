@@ -26,6 +26,7 @@ class Dashboard extends Component {
         rowHasChanged: (row1, row2) => row1 !== row2,
       }).cloneWithRows([
         { 'name': 'Events', 'type': 'category', 'description': 'Have fun with family and friends!' },
+        { 'name': 'Event Map', 'type': 'category', 'description': 'View events near you!' },
         { 'name': 'Jobs', 'type': 'category', 'description': 'Start getting a steady paycheck.' },
         { 'name': 'Coupons', 'type': 'category', 'description': 'Save big money!' },
         { 'name': 'Help', 'type': 'category', 'description': 'Find help paying rent, food, and other life necessities.' }

@@ -17,8 +17,10 @@ class ListingEvent extends Component {
   render() {
     return (
       <View style={styles.row}>
-        <Image source={{uri: "https://maps.googleapis.com/maps/api/staticmap?center=" + this.props.item.location.lat + "," + this.props.item.location.lng + "&zoom=13&size=500x200&maptype=roadmap&markers=color:blue%7Clabel:S%7C" + this.props.item.location.lat + "," + this.props.item.location.lng + "&key=AIzaSyBVlVh60b5zD3CzZRCP3W4Aiuy2rtfbvJM"}} />
-        <Text>{JSON.stringify(this.props.item)}</Text>
+        <Image style={{flex: 1, flexDirection: 'row', height: 100, padding: 10}} source={{uri: "https://maps.googleapis.com/maps/api/staticmap?center=" + this.props.item.location.lat + "," + this.props.item.location.lng + "&zoom=13&size=500x200&maptype=roadmap&markers=color:red%7C" + this.props.item.location.lat + "," + this.props.item.location.lng + "&key=AIzaSyBVlVh60b5zD3CzZRCP3W4Aiuy2rtfbvJM"}} />
+        <View style={styles.caption}>
+          <Text>{this.props.item.name}</Text>
+        </View>
       </View>
     );
   }
@@ -33,12 +35,15 @@ const styles = StyleSheet.create({
     marginHorizontal: 10,
     marginVertical: 15,
     marginTop: 0,
-    padding: 20,
+    // padding: 20,
     justifyContent: 'center'
   },
   name: {
-    color: 'black',
+    color: '#333',
     fontSize: 16,
+  },
+  caption: {
+    padding: 10,
   }
 })
 

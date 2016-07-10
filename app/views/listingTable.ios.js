@@ -40,9 +40,15 @@ class ListingTable extends Component {
   }
 
   _renderRow (item) {
-    return (
-      <CustomComponents.Listing item={item.name} />
-    );
+    if (item.type == 'events') {
+      return <CustomComponents.ListingEvent item={item} />
+    } else if (item.type == 'jobs') {
+      return <CustomComponents.ListingJob item={item} />
+    } else if (item.type == 'coupons') {
+      return <CustomComponents.ListingCoupon item={item} />
+    } else if (item.type == 'help') {
+      return <CustomComponents.ListingHelp item={item} />
+    }
   }
 
   render() {

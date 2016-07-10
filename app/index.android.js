@@ -49,7 +49,6 @@ class HelperUpper extends Component {
             barStyle="light-content"
             {...route.statusBar}
           />
-          <CustomComponents.TopBar />
 
           {
             React.createElement(

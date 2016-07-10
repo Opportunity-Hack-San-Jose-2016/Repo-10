@@ -17,7 +17,7 @@ class ListingJob extends Component {
   render() {
     return (
       <View style={styles.row}>
-        <Text>{JSON.stringify(this.props.item)}</Text>
+        <Text>hi</Text>
       </View>
     );
   }
@@ -41,6 +41,6 @@ const styles = StyleSheet.create({
   }
 })
 
-AppRegistry.registerComponent('ListingJob', () => TopBar);
+AppRegistry.registerComponent('ListingJob', () => ListingJob);
 
 module.exports = ListingJob;

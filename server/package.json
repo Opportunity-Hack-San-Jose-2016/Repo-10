@@ -25,6 +25,7 @@
     "firebase": "^3.1.0",
     "mathjs": "^3.3.0",
     "mocha": "^2.5.3",
+    "moment": "^2.14.1",
     "node-parse-api": "*",
     "request": "*"
   },

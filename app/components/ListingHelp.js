@@ -17,7 +17,7 @@ class ListingHelp extends Component {
   render() {
     return (
       <View style={styles.row}>
-        <Text>help</Text>
+        <Text>{this.props.item.name}</Text>
       </View>
     );
   }

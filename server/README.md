@@ -19,7 +19,7 @@ To run tests simply run the following code:
 
 ### GET api/v1/reviews/listing/:listing_id
 
-	result is in the following format, listing_id is the id of the listing, rating is the score of each review, review_text is the review itself, and id is the review's id
+result is in the following format, listing_id is the id of the listing, rating is the score of each review, review_text is the review itself, and id is the review's id
 
 	[
 	  {
@@ -44,7 +44,7 @@ To run tests simply run the following code:
 
 ### GET api/v1/reviews/id/:id
 
-	result is in the following format, with the same keys as above
+result is in the following format, with the same keys as above
 
 	{
 	    "listing_id": "0",

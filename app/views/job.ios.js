@@ -17,46 +17,37 @@ const Firebase = require('./config/Firebase.js');
 const db = Firebase.database();
 
 class ListingDetailJob extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      dataSource: new ListView.DataSource({
-        rowHasChanged: (row1, row2) => row1 !== row2,
-      }).cloneWithRows([])
-    };
-    this.listings = db.ref("listings");
-  }
+    constructor(props) {
+      super(props);
+      this.state = {
+          listing: props
+      };
+    }
 
-  componentDidMount () {
-    this.listings.on('value', (snap) => {
-      var result = [];
-      snap.forEach((child) => {
-        result.push({
-          title: child.val().name
+    componentDidMount () {
+        // let response = await fetch("http://localhost:8080/reviews/listing/" + this.state.listing.key);
+        let response = await fetch("http://192.168.84.183:8080/api/v1/reviews/listing/1");
+        let responseJson = await response.json();
+        this.setState({
+          dataSource: this.state.dataSource.cloneWithRows(responseJson)
         });
-      })
+    }
 
-      this.setState({
-        dataSource: this.state.dataSource.cloneWithRows(result)
-      });
-    })
-  }
+    _renderRow (item) {
+      return <Text style={styles.ratingText}>{item.rating}</Text><Text>{item.review_text}</Text>;
+    }
 
-  _renderRow (item) {
-    return <Text>{item.title}</Text>;
-  }
-
-  render() {
-    return (
-      <View style={{flex: 1, backgroundColor: 'white'}}>
-        <ListView
-          dataSource={this.state.dataSource}
-          renderRow={this._renderRow.bind(this)}
-          enableEmptySections={true}
-          style={{flex: 1}} />
-      </View>
-    );
-  }
+    render() {
+      return (
+        <View style={{flex: 1, backgroundColor: 'white'}}>
+          <ListView
+            dataSource={this.state.dataSource}
+            renderRow={this._renderRow.bind(this)}
+            enableEmptySections={true}
+            style={{flex: 1}} />
+        </View>
+      );
+    }
 }
 
 const styles = StyleSheet.create({

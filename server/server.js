@@ -44,7 +44,7 @@ app.use("/styles",  express.static(__dirname + '/styles'));
 app.use("/js", express.static(__dirname + '/js'));
 app.use("/images",  express.static(__dirname + '/images'));
 
-app.get('/',function(req,res){
+app.get('/', function(req,res){
 	res.sendfile(path.join(__dirname + '/index.html'));
 });
 
@@ -70,12 +70,7 @@ function verifyRequestSignature(req, res, buf) {
   }
 }
 
-
 app.use('/api', router);
-
-
-
-
 
 // START THE SERVER
 // =============================================================================

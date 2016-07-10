@@ -13,9 +13,6 @@ import {
   ListView,
 } from 'react-native';
 
-const Firebase = require('../config/Firebase.js');
-const db = Firebase.database();
-
 const CustomComponents = require('../components');
 
 class ListingTable extends Component {
@@ -44,7 +41,7 @@ class ListingTable extends Component {
 
   _renderRow (item) {
     return (
-      <CustomComponents.Listing item={item} />
+      <CustomComponents.Listing item={item.name} />
     );
   }
 

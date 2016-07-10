@@ -2,10 +2,10 @@
 var express    = require('express');
 var bodyParser = require('body-parser');
 var app        = express();
-var config     = require('config');
-var crypto     = require('crypto');
-var https      = require('https');
-var request    = require('request');
+var config = require('config');
+var crypto = require('crypto');
+var  https = require('https');
+var request = require('request');
 
 const HASH = config.get("hash");
 

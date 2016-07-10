@@ -39,14 +39,14 @@ var reviews = db.ref("reviews");
 
 exports.postReview = function(req, res){
 	var review = {};
-	review.review_text = req.params.review_text;
-	review.rating = req.params.rating;
-	review.listing_id = req.params.listing_id;
-	var listref = db.ref("listings/" + listing_id + "/reviews");
+	review.review_text = req.body.review_text;
+	review.rating = req.body.rating;
+	review.listing_id = req.body.listing_id;
+	console.log(review)
+	var listref = db.ref("listings/" + review.listing_id + "/reviews");
 	reviews.once("value", function(snapshot) {
 		var index = snapshot.val().length;
-		listref.push(index);
-		reviews.push(review);
+		listref.push(reviews.push(review).key);
 		res.status(200);
 		res.send();
 	})
@@ -68,8 +68,12 @@ exports.getReviewByListing = function(req, res){
 		reviews.once("value", function(rsnapshot) {
 			var revData = rsnapshot.val();
 			var result = [];
-			for (var i = 0; i < listrevs.length; i++) {
-				result.push(revData[listrevs[i]]);
+			for (var key in listrevs) {
+				if (listrevs.hasOwnProperty(key)) {
+					var item = revData[listrevs[key]];
+					item["id"] = key;
+					result.push(item);
+				}
 			}
 			res.status(200);
 			res.json(result);

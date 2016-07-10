@@ -40,6 +40,7 @@ class HelperUpper extends Component {
         <View style={{flex: 1}}>
           <StatusBar
             barStyle="default"
+            barStyle="light-content"
             {...route.statusBar}
           />
 

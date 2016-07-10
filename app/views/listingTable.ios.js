@@ -18,44 +18,33 @@ const db = Firebase.database();
 
 const CustomComponents = require('../components');
 
-class Dashboard extends Component {
+class ListingTable extends Component {
   constructor(props) {
     super(props);
     this.state = {
       dataSource: new ListView.DataSource({
         rowHasChanged: (row1, row2) => row1 !== row2,
-      }).cloneWithRows([
-        {
-          name: 'Events',
-          type: 'category'
-        },
-        {
-          name: 'Jobs',
-          type: 'category'
-        },,
-        {
-          name: 'Coupons',
-          type: 'category'
-        },,
-        {
-          name: 'Help',
-          type: 'category'
-        },,
-        {
-          name: 'About Us',
-          type: 'category'
-        },
-      ])
+      }).cloneWithRows([])
     };
-    this.listings = db.ref("listings");
   }
 
   componentDidMount () {
+    fetch("http://192.168.84.183:8080/api/v1/listings/type/" + this.props.type.toLowerCase())
+      .then((res) => res.json())
+      .then((resJSON) => {
+        this.setState({
+          dataSource: this.state.dataSource.cloneWithRows(resJSON)
+        });
+        return;
+      })
+      .catch((error) => {
+        console.error(error);
+      });
   }
 
   _renderRow (item) {
     return (
-      <CustomComponents.Category item={item} {...this.props} />
+      <CustomComponents.Listing item={item} />
     );
   }
 
@@ -80,8 +69,8 @@ const styles = StyleSheet.create({
     paddingTop: 15,
     paddingBottom: 50,
   },
-});
+})
 
-AppRegistry.registerComponent('Dashboard', () => Dashboard);
+AppRegistry.registerComponent('ListingTable', () => Dashboard);
 
-module.exports = Dashboard;
+module.exports = ListingTable;

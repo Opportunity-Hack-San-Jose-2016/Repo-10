@@ -4,5 +4,3 @@
 
 Our goal is to build a versatile platform that can provide recommendations and services to users who are in poverty through the non-profit organization [Understanding Poverty](http://www.understandingpoverty.com/#understanding-poverty)
 
-
-### [HelperServer](server)

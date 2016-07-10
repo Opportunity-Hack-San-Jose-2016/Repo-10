@@ -13,7 +13,9 @@ import {
   Image,
 } from 'react-native';
 
-const ListingEvent = require('./ListingEvent')
+const ListingHelp = require('./ListingHelp.js');
+const ListingJob = require('./ListingJob.js');
+const ListingCoupon = require('./ListingCoupon.js');
 
 class Listing extends Component {
   render() {
@@ -46,6 +48,6 @@ const styles = StyleSheet.create({
   }
 })
 
-AppRegistry.registerComponent('Listing', () => TopBar);
+AppRegistry.registerComponent('Listing', () => Listing);
 
 module.exports = Listing;

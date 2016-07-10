@@ -17,7 +17,7 @@ class ListingHelp extends Component {
   render() {
     return (
       <View style={styles.row}>
-        <Text>{this.props.item.name}</Text>
+        <Text>help</Text>
       </View>
     );
   }
@@ -41,6 +41,6 @@ const styles = StyleSheet.create({
   }
 })
 
-AppRegistry.registerComponent('ListingHelp', () => TopBar);
+AppRegistry.registerComponent('ListingHelp', () => ListingHelp);
 
 module.exports = ListingHelp;

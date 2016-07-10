@@ -54,6 +54,7 @@ class ListingTable extends Component {
   render() {
     return (
       <View style={{flex: 1, backgroundColor: 'white'}}>
+        <CustomComponents.TopBar />
         <ListView
           dataSource={this.state.dataSource}
           renderRow={this._renderRow.bind(this)}

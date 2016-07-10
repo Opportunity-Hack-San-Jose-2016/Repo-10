@@ -35,7 +35,6 @@ const styles = StyleSheet.create({
     marginHorizontal: 10,
     marginVertical: 15,
     marginTop: 0,
-    // padding: 20,
     justifyContent: 'center'
   },
   name: {

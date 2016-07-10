@@ -1,15 +1,15 @@
 listing = {
-	name:{
-		type:string
+	"name":{
+		"type":"string"
 	},
-	reviews: {
-		type:number_array
+	"reviews": {
+		"type":"number_array"
 	},
-	score: {
-		type:number
+	"score": {
+		"type":"number"
 	},
-	time: {
-		type: unix-timestamp
+	"time": {
+		"type": "unix-timestamp"
 	},
 	type: {
 		type: string

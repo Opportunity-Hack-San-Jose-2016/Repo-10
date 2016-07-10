@@ -82,8 +82,6 @@ router.route('/listings')
 router.route('/listings/search/:keywords')
 	.get(api.searchListings);
 
-var reviews = db.ref("reviews");
-
 router.route('/reviews')
 	.post(api.postReview);
 router.route('/reviews/listing/:listing_id')

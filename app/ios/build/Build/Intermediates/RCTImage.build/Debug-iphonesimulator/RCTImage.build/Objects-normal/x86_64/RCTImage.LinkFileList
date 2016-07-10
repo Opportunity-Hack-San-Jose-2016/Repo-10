@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /Users/akshay/Documents/Programming/Repo-10/app/ios/build/Build/Intermediates/RCTImage.build/Debug-iphonesimulator/RCTImage.build/Objects-normal/x86_64/RCTImageStoreManager.o
 /Users/akshay/Documents/Programming/Repo-10/app/ios/build/Build/Intermediates/RCTImage.build/Debug-iphonesimulator/RCTImage.build/Objects-normal/x86_64/RCTImageViewManager.o
 /Users/akshay/Documents/Programming/Repo-10/app/ios/build/Build/Intermediates/RCTImage.build/Debug-iphonesimulator/RCTImage.build/Objects-normal/x86_64/RCTGIFImageDecoder.o
@@ -8,3 +9,15 @@
 /Users/akshay/Documents/Programming/Repo-10/app/ios/build/Build/Intermediates/RCTImage.build/Debug-iphonesimulator/RCTImage.build/Objects-normal/x86_64/RCTImageBlurUtils.o
 /Users/akshay/Documents/Programming/Repo-10/app/ios/build/Build/Intermediates/RCTImage.build/Debug-iphonesimulator/RCTImage.build/Objects-normal/x86_64/RCTXCAssetImageLoader.o
 /Users/akshay/Documents/Programming/Repo-10/app/ios/build/Build/Intermediates/RCTImage.build/Debug-iphonesimulator/RCTImage.build/Objects-normal/x86_64/RCTImageUtils.o
+=======
+/Users/anuragbanerjee/Dropbox/Development/Repos/HelperUpper/app/ios/build/Build/Intermediates/RCTImage.build/Debug-iphonesimulator/RCTImage.build/Objects-normal/x86_64/RCTImageStoreManager.o
+/Users/anuragbanerjee/Dropbox/Development/Repos/HelperUpper/app/ios/build/Build/Intermediates/RCTImage.build/Debug-iphonesimulator/RCTImage.build/Objects-normal/x86_64/RCTImageViewManager.o
+/Users/anuragbanerjee/Dropbox/Development/Repos/HelperUpper/app/ios/build/Build/Intermediates/RCTImage.build/Debug-iphonesimulator/RCTImage.build/Objects-normal/x86_64/RCTGIFImageDecoder.o
+/Users/anuragbanerjee/Dropbox/Development/Repos/HelperUpper/app/ios/build/Build/Intermediates/RCTImage.build/Debug-iphonesimulator/RCTImage.build/Objects-normal/x86_64/RCTImageLoader.o
+/Users/anuragbanerjee/Dropbox/Development/Repos/HelperUpper/app/ios/build/Build/Intermediates/RCTImage.build/Debug-iphonesimulator/RCTImage.build/Objects-normal/x86_64/RCTImageEditingManager.o
+/Users/anuragbanerjee/Dropbox/Development/Repos/HelperUpper/app/ios/build/Build/Intermediates/RCTImage.build/Debug-iphonesimulator/RCTImage.build/Objects-normal/x86_64/RCTResizeMode.o
+/Users/anuragbanerjee/Dropbox/Development/Repos/HelperUpper/app/ios/build/Build/Intermediates/RCTImage.build/Debug-iphonesimulator/RCTImage.build/Objects-normal/x86_64/RCTImageView.o
+/Users/anuragbanerjee/Dropbox/Development/Repos/HelperUpper/app/ios/build/Build/Intermediates/RCTImage.build/Debug-iphonesimulator/RCTImage.build/Objects-normal/x86_64/RCTImageBlurUtils.o
+/Users/anuragbanerjee/Dropbox/Development/Repos/HelperUpper/app/ios/build/Build/Intermediates/RCTImage.build/Debug-iphonesimulator/RCTImage.build/Objects-normal/x86_64/RCTXCAssetImageLoader.o
+/Users/anuragbanerjee/Dropbox/Development/Repos/HelperUpper/app/ios/build/Build/Intermediates/RCTImage.build/Debug-iphonesimulator/RCTImage.build/Objects-normal/x86_64/RCTImageUtils.o
+>>>>>>> origin/master

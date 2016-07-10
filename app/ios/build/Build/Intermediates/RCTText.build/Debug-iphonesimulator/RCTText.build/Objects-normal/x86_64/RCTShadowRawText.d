@@ -1,6 +1,11 @@
 dependencies: \
+<<<<<<< HEAD
   /Users/akshay/Documents/Programming/Repo-10/app/node_modules/react-native/Libraries/Text/RCTShadowRawText.m \
   /Users/akshay/Documents/Programming/Repo-10/app/node_modules/react-native/Libraries/Text/RCTShadowRawText.h \
+=======
+  /Users/anuragbanerjee/Dropbox/Development/Repos/HelperUpper/app/node_modules/react-native/Libraries/Text/RCTShadowRawText.m \
+  /Users/anuragbanerjee/Dropbox/Development/Repos/HelperUpper/app/node_modules/react-native/Libraries/Text/RCTShadowRawText.h \
+>>>>>>> origin/master
   ../../React/Views/RCTShadowView.h ../../React/Layout/Layout.h \
   ../../React/Views/RCTComponent.h ../../React/Base/RCTRootView.h \
   ../../React/Base/RCTBridge.h ../../React/Base/RCTBridgeDelegate.h \

@@ -1,13 +1,16 @@
-// All required utils for the app 
+// All required utils for the app
 var express    = require('express');
 var bodyParser = require('body-parser');
 var app        = express();
-var config = require('config');
-var crypto = require('crypto');
-var  https = require('https'); 
-var request = require('request');
+var config     = require('config');
+var crypto     = require('crypto');
+var https      = require('https');
+var request    = require('request');
 
 const HASH = config.get("hash");
+
+const Firebase = require('./config/Firebase.js');
+const db = Firebase.database();
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -41,7 +44,7 @@ app.use("/styles",  express.static(__dirname + '/styles'));
 app.use("/js", express.static(__dirname + '/js'));
 app.use("/images",  express.static(__dirname + '/images'));
 
-app.get('/',function(req,res){
+app.get('/', function(req,res){
 	res.sendfile(path.join(__dirname + '/index.html'));
 });
 
@@ -49,7 +52,7 @@ function verifyRequestSignature(req, res, buf) {
   var signature = req.headers["x-hub-signature"];
 
   if (!signature) {
-    // For testing, let's log an error. In production, you should throw an 
+    // For testing, let's log an error. In production, you should throw an
     // error.
     console.error("Couldn't validate the signature.");
   } else {
@@ -67,12 +70,7 @@ function verifyRequestSignature(req, res, buf) {
   }
 }
 
-
 app.use('/api', router);
-
-
-
-
 
 // START THE SERVER
 // =============================================================================

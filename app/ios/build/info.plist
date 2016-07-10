@@ -3,6 +3,10 @@
 <plist version="1.0">
 <dict>
 	<key>WorkspacePath</key>
+<<<<<<< HEAD
 	<string>/Users/akshay/Documents/Programming/Repo-10/app/ios/HelperUpper.xcodeproj</string>
+=======
+	<string>/Users/anuragbanerjee/Dropbox/Development/Repos/HelperUpper/app/ios/HelperUpper.xcodeproj</string>
+>>>>>>> origin/master
 </dict>
 </plist>

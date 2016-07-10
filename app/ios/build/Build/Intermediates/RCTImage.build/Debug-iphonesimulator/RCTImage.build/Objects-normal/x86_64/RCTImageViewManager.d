@@ -1,6 +1,11 @@
 dependencies: \
+<<<<<<< HEAD
   /Users/akshay/Documents/Programming/Repo-10/app/node_modules/react-native/Libraries/Image/RCTImageViewManager.m \
   /Users/akshay/Documents/Programming/Repo-10/app/node_modules/react-native/Libraries/Image/RCTImageViewManager.h \
+=======
+  /Users/anuragbanerjee/Dropbox/Development/Repos/HelperUpper/app/node_modules/react-native/Libraries/Image/RCTImageViewManager.m \
+  /Users/anuragbanerjee/Dropbox/Development/Repos/HelperUpper/app/node_modules/react-native/Libraries/Image/RCTImageViewManager.h \
+>>>>>>> origin/master
   ../../React/Views/RCTViewManager.h ../../React/Base/RCTBridgeModule.h \
   ../../React/Base/RCTDefines.h ../../React/Base/RCTConvert.h \
   ../../React/Layout/Layout.h ../../React/Views/RCTAnimationType.h \
@@ -13,9 +18,18 @@ dependencies: \
   ../../React/Base/RCTInvalidating.h \
   ../../React/Base/RCTJavaScriptExecutor.h \
   ../../React/Views/UIView+React.h ../../React/Views/RCTComponent.h \
+<<<<<<< HEAD
   /Users/akshay/Documents/Programming/Repo-10/app/node_modules/react-native/Libraries/Image/RCTImageLoader.h \
   ../../React/Base/RCTURLRequestHandler.h \
   ../../React/Base/RCTURLRequestDelegate.h \
   /Users/akshay/Documents/Programming/Repo-10/app/node_modules/react-native/Libraries/Image/RCTResizeMode.h \
   ../../React/Base/RCTImageSource.h \
   /Users/akshay/Documents/Programming/Repo-10/app/node_modules/react-native/Libraries/Image/RCTImageView.h
+=======
+  /Users/anuragbanerjee/Dropbox/Development/Repos/HelperUpper/app/node_modules/react-native/Libraries/Image/RCTImageLoader.h \
+  ../../React/Base/RCTURLRequestHandler.h \
+  ../../React/Base/RCTURLRequestDelegate.h \
+  /Users/anuragbanerjee/Dropbox/Development/Repos/HelperUpper/app/node_modules/react-native/Libraries/Image/RCTResizeMode.h \
+  ../../React/Base/RCTImageSource.h \
+  /Users/anuragbanerjee/Dropbox/Development/Repos/HelperUpper/app/node_modules/react-native/Libraries/Image/RCTImageView.h
+>>>>>>> origin/master

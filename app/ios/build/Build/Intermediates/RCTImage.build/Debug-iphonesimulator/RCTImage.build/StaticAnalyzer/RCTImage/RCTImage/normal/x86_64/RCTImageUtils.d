@@ -1,8 +1,15 @@
 dependencies: \
+<<<<<<< HEAD
   /Users/akshay/Documents/Programming/Repo-10/app/node_modules/react-native/Libraries/Image/RCTImageUtils.m \
   /Users/akshay/Documents/Programming/Repo-10/app/node_modules/react-native/Libraries/Image/RCTImageUtils.h \
   ../../React/Base/RCTDefines.h \
   /Users/akshay/Documents/Programming/Repo-10/app/node_modules/react-native/Libraries/Image/RCTResizeMode.h \
+=======
+  /Users/anuragbanerjee/Dropbox/Development/Repos/HelperUpper/app/node_modules/react-native/Libraries/Image/RCTImageUtils.m \
+  /Users/anuragbanerjee/Dropbox/Development/Repos/HelperUpper/app/node_modules/react-native/Libraries/Image/RCTImageUtils.h \
+  ../../React/Base/RCTDefines.h \
+  /Users/anuragbanerjee/Dropbox/Development/Repos/HelperUpper/app/node_modules/react-native/Libraries/Image/RCTResizeMode.h \
+>>>>>>> origin/master
   ../../React/Base/RCTConvert.h ../../React/Layout/Layout.h \
   ../../React/Views/RCTAnimationType.h \
   ../../React/Views/RCTBorderStyle.h \

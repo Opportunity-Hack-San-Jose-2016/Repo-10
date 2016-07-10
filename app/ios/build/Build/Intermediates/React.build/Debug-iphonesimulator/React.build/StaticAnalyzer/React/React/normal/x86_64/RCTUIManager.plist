@@ -6,7 +6,11 @@
 <string>Apple LLVM version 7.3.0 (clang-703.0.31)</string>
  <key>files</key>
  <array>
+<<<<<<< HEAD
   <string>/Users/akshay/Documents/Programming/Repo-10/app/node_modules/react-native/React/Modules/RCTUIManager.m</string>
+=======
+  <string>/Users/anuragbanerjee/Dropbox/Development/Repos/HelperUpper/app/node_modules/react-native/React/Modules/RCTUIManager.m</string>
+>>>>>>> origin/master
  </array>
  <key>diagnostics</key>
  <array>

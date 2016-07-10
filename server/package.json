@@ -19,13 +19,13 @@
   "dependencies": {
     "body-parser": "*",
     "chai": "^3.5.0",
-    "express": "*",
-    "node-parse-api": "*",
     "config": "*",
     "crypto": "*",
-    "request": "*",
+    "express": "*",
+    "firebase": "^3.1.0",
     "mocha": "^2.5.3",
-    "node-parse-api": "*"
+    "node-parse-api": "*",
+    "request": "*"
   },
   "devDependencies": {
     "coveralls": "^2.11.9"

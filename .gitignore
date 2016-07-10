@@ -35,6 +35,8 @@ app/node_modules/
 app/npm-debug.log
 server/node_modules/
 server/npm-debug.log
+**/node_modules/*
+**npm-debug.log
 
 # BUCK
 app/buck-out/

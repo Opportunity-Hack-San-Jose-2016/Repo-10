@@ -17,7 +17,9 @@ class ListingHelp extends Component {
   render() {
     return (
       <View style={styles.row}>
-        <Text>{this.props.item.name}</Text>
+        <Text style={styles.name}>{this.props.item.name}</Text>
+        <Text style={styles.description}>{this.props.item.description}</Text>
+        <Text style={styles.rating}>Rating: {parseFloat(this.props.item.score).toFixed(2)}/5, aid in 3-7 days</Text>
       </View>
     );
   }
@@ -38,6 +40,12 @@ const styles = StyleSheet.create({
   name: {
     color: 'black',
     fontSize: 16,
+  },
+  rating: {
+    marginTop: 5,
+  },
+  description: {
+    marginTop: 5,
   }
 })
 

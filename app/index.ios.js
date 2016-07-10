@@ -1,6 +1,6 @@
 /**
- * Sample React Native App
- * https://github.com/facebook/react-native
+ * HelperUpper React Native App
+ * https://github.com/Opportunity-Hack-San-Jose-2016/Repo-10
  * @flow
  */
 

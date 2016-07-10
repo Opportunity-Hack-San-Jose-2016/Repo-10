@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/anuragbanerjee/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-urlconnection/3.2.0/6f8a4b1435c9e0a6f9c5fe4a1be46627b848fd0c/okhttp-urlconnection-3.2.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="6f8a4b1435c9e0a6f9c5fe4a1be46627b848fd0c">
+        <dex dex="/Users/anuragbanerjee/Dropbox/Development/Repos/HelperUpper/app/android/app/build/intermediates/pre-dexed/debug/okhttp-urlconnection-3.2.0-636c54899f3da87656ed346e106d09abea4a960f.jar" />
+    </item>
+    <item
+        jar="/Users/anuragbanerjee/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.0/5871fb60dc68d67da54a663c3fd636a10a532948/jsr305-3.0.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="5871fb60dc68d67da54a663c3fd636a10a532948">
+        <dex dex="/Users/anuragbanerjee/Dropbox/Development/Repos/HelperUpper/app/android/app/build/intermediates/pre-dexed/debug/jsr305-3.0.0-7784e7fc0481d5536e25bb7b7b52b002fd5eddb4.jar" />
+    </item>
+    <item
+        jar="/Users/anuragbanerjee/Dropbox/Development/Repos/HelperUpper/app/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="/Users/anuragbanerjee/Dropbox/Development/Repos/HelperUpper/app/android/app/build/intermediates/pre-dexed/debug/classes-379de2eb458a6897fc5ff1556f12fab3441b11e0.jar" />
+    </item>
+    <item
+        jar="/Users/anuragbanerjee/.gradle/caches/modules-2/files-2.1/com.nineoldandroids/library/2.4.0/e9b63380f3a242dbdbf103a2355ad7e43bad17cb/library-2.4.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb">
+        <dex dex="/Users/anuragbanerjee/Dropbox/Development/Repos/HelperUpper/app/android/app/build/intermediates/pre-dexed/debug/library-2.4.0-59e792962ff45c28d38446d68b5ae1a01e7094e1.jar" />
+    </item>
+    <item
+        jar="/Users/anuragbanerjee/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.2.1/support-annotations-23.2.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="ccb693bc0774fcb637246f7360de25b4af7df318">
+        <dex dex="/Users/anuragbanerjee/Dropbox/Development/Repos/HelperUpper/app/android/app/build/intermediates/pre-dexed/debug/support-annotations-23.2.1-bf9a731ceae5657605898135580c950ce2503271.jar" />
+    </item>
+    <item
+        jar="/Users/anuragbanerjee/Dropbox/Development/Repos/HelperUpper/app/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline/0.11.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="3341b66c54367e777a0647e2db96c045329bfeab">
+        <dex dex="/Users/anuragbanerjee/Dropbox/Development/Repos/HelperUpper/app/android/app/build/intermediates/pre-dexed/debug/classes-804cd58492a88ca2eec23db1a65cc9f267f2d56a.jar" />
+    </item>
+    <item
+        jar="/Users/anuragbanerjee/Dropbox/Development/Repos/HelperUpper/app/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fresco/0.11.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d31aadf33187c37a7cd63dc1b769f8c6e33f78c3">
+        <dex dex="/Users/anuragbanerjee/Dropbox/Development/Repos/HelperUpper/app/android/app/build/intermediates/pre-dexed/debug/classes-c56345e097460cdbe45c0f7e488e29eb832094d1.jar" />
+    </item>
+    <item
+        jar="/Users/anuragbanerjee/Dropbox/Development/Repos/HelperUpper/app/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="3be474b1b21b31cf2fa93fe6bd641ae108d96452">
+        <dex dex="/Users/anuragbanerjee/Dropbox/Development/Repos/HelperUpper/app/android/app/build/intermediates/pre-dexed/debug/classes-41178731006adb3ca561aba8e0c69e1bf8634c8d.jar" />
+    </item>
+    <item
+        jar="/Users/anuragbanerjee/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-ws/3.2.0/1ea229d6984444c8c58b8e97ba4c8429d9d135b3/okhttp-ws-3.2.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="1ea229d6984444c8c58b8e97ba4c8429d9d135b3">
+        <dex dex="/Users/anuragbanerjee/Dropbox/Development/Repos/HelperUpper/app/android/app/build/intermediates/pre-dexed/debug/okhttp-ws-3.2.0-48cbbac1425da6581e5a627ccab935efdcd59652.jar" />
+    </item>
+    <item
+        jar="/Users/anuragbanerjee/Dropbox/Development/Repos/HelperUpper/app/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.29.0/jars/libs/infer-annotations-1.5.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="df2d16b25be8683063ce05d15192b62dce3f4890">
+        <dex dex="/Users/anuragbanerjee/Dropbox/Development/Repos/HelperUpper/app/android/app/build/intermediates/pre-dexed/debug/infer-annotations-1.5-4e54396236def13190d29d718dc034fd8283c31b.jar" />
+    </item>
+    <item
+        jar="/Users/anuragbanerjee/Dropbox/Development/Repos/HelperUpper/app/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.1/jars/libs/internal_impl-23.2.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="607a3d0b8013b4ccbfeb0b7cb293351994e021fb">
+        <dex dex="/Users/anuragbanerjee/Dropbox/Development/Repos/HelperUpper/app/android/app/build/intermediates/pre-dexed/debug/internal_impl-23.2.1-bc41e811d84b535dc5f91d096bcdb3238f4906bc.jar" />
+    </item>
+    <item
+        jar="/Users/anuragbanerjee/Dropbox/Development/Repos/HelperUpper/app/android/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="4356e230a981d1bbf047d848b91bc0d9b7c5bacc">
+        <dex dex="/Users/anuragbanerjee/Dropbox/Development/Repos/HelperUpper/app/android/app/build/intermediates/pre-dexed/debug/classes-3819881e8446e7d847b31ab3d20ce040142e4806.jar" />
+    </item>
+    <item
+        jar="/Users/anuragbanerjee/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.2.3/1a0113da2cab5f4c216b4e5e7c1dbfaa67087e14/jackson-core-2.2.3.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="1a0113da2cab5f4c216b4e5e7c1dbfaa67087e14">
+        <dex dex="/Users/anuragbanerjee/Dropbox/Development/Repos/HelperUpper/app/android/app/build/intermediates/pre-dexed/debug/jackson-core-2.2.3-5a83e9d1798445fe70c4a60d37993a2dae0dff54.jar" />
+    </item>
+    <item
+        jar="/Users/anuragbanerjee/Dropbox/Development/Repos/HelperUpper/app/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.29.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="3d3b981aa5d57d8b9104a719b8879abcbbd7a91e">
+        <dex dex="/Users/anuragbanerjee/Dropbox/Development/Repos/HelperUpper/app/android/app/build/intermediates/pre-dexed/debug/classes-b6b9736ccee304ca90b4d545e63b57114d36b0db.jar" />
+    </item>
+    <item
+        jar="/Users/anuragbanerjee/Dropbox/Development/Repos/HelperUpper/app/android/app/build/intermediates/exploded-aar/com.facebook.fresco/drawee/0.11.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="1137942adeb03984c1311b662363dd38fc238fd3">
+        <dex dex="/Users/anuragbanerjee/Dropbox/Development/Repos/HelperUpper/app/android/app/build/intermediates/pre-dexed/debug/classes-fe4f287092d64e61d50e0ed08caead882418919e.jar" />
+    </item>
+    <item
+        jar="/Users/anuragbanerjee/Dropbox/Development/Repos/HelperUpper/app/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-okhttp3/0.11.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="2b8a01ad9da5d26d0067894c22e87597bca2c500">
+        <dex dex="/Users/anuragbanerjee/Dropbox/Development/Repos/HelperUpper/app/android/app/build/intermediates/pre-dexed/debug/classes-6a436285aada60bbee6d3f1d02686d648dfb5ccf.jar" />
+    </item>
+    <item
+        jar="/Users/anuragbanerjee/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.8.0/5ea7af56cc7c567ed9856d99efb30740e9b17ff/okio-1.8.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="05ea7af56cc7c567ed9856d99efb30740e9b17ff">
+        <dex dex="/Users/anuragbanerjee/Dropbox/Development/Repos/HelperUpper/app/android/app/build/intermediates/pre-dexed/debug/okio-1.8.0-0d6d4823d1326160a20b1825abd6151842335d20.jar" />
+    </item>
+    <item
+        jar="/Users/anuragbanerjee/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.2.0/f7873a2ebde246a45c2a8d6f3247108b4c88a879/okhttp-3.2.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="f7873a2ebde246a45c2a8d6f3247108b4c88a879">
+        <dex dex="/Users/anuragbanerjee/Dropbox/Development/Repos/HelperUpper/app/android/app/build/intermediates/pre-dexed/debug/okhttp-3.2.0-f312103ad38bef72a1123311505d64344815221b.jar" />
+    </item>
+    <item
+        jar="/Users/anuragbanerjee/Dropbox/Development/Repos/HelperUpper/app/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-base/0.11.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="ca63c521b5745ae9a09629d7ca67ff6bc2a967fe">
+        <dex dex="/Users/anuragbanerjee/Dropbox/Development/Repos/HelperUpper/app/android/app/build/intermediates/pre-dexed/debug/classes-ddb30041a1eaae0b4029c2445971cf53399f539d.jar" />
+    </item>
+    <item
+        jar="/Users/anuragbanerjee/Dropbox/Development/Repos/HelperUpper/app/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fbcore/0.11.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="98786c1770b531b9194fb6448b2a2692c64074b6">
+        <dex dex="/Users/anuragbanerjee/Dropbox/Development/Repos/HelperUpper/app/android/app/build/intermediates/pre-dexed/debug/classes-00d1b7364de78134696ce79bf0cb25282e04f018.jar" />
+    </item>
+    <item
+        jar="/Users/anuragbanerjee/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.4.0/d85884acf6810a3bbbecb587f239005cbc846dc4/bolts-tasks-1.4.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
+        <dex dex="/Users/anuragbanerjee/Dropbox/Development/Repos/HelperUpper/app/android/app/build/intermediates/pre-dexed/debug/bolts-tasks-1.4.0-83f2255db5374350803bfadf5c2f32ef8891979e.jar" />
+    </item>
+
+</items>

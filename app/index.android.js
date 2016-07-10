@@ -1,6 +1,6 @@
 /**
- * Sample React Native App
- * https://github.com/facebook/react-native
+ * HelperUpper React Native App
+ * https://github.com/Opportunity-Hack-San-Jose-2016/Repo-10
  * @flow
  */
 
@@ -9,44 +9,66 @@ import {
   AppRegistry,
   StyleSheet,
   Text,
-  View
+  View,
+  ListView,
+  StatusBar,
+  Navigator,
 } from 'react-native';
 
+const Firebase = require('./config/Firebase.js');
+const db = Firebase.database();
+
+// const component = require('./components/index.js');
+const view = require('./views/index.js');
+
 class HelperUpper extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      dataSource: new ListView.DataSource({
+        rowHasChanged: (row1, row2) => row1 !== row2,
+      }).cloneWithRows([])
+    };
+    this.listings = db.ref("listings");
+  }
+
+  renderScene(route, navigator) {
+    if (route.component == 'inline') {
+      return route.payload
+    } else {
+      return (
+        <View style={{flex: 1}}>
+          <StatusBar
+            barStyle="default"
+            barStyle="light-content"
+            {...route.statusBar}
+          />
+
+          {
+            React.createElement(
+              route.component,
+              {...this.props, ...route.payload, route, navigator, view: view}
+            )
+          }
+        </View>
+      );
+    }
+  }
+
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.android.js
-        </Text>
-        <Text style={styles.instructions}>
-          Shake or press menu button for dev menu
-        </Text>
-      </View>
+      <Navigator
+        initialRoute={{
+          component: view.Dashboard,
+          statusBar: {
+          },
+        }}
+        renderScene={this.renderScene.bind(this)} />
     );
   }
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-});
+})
 
 AppRegistry.registerComponent('HelperUpper', () => HelperUpper);

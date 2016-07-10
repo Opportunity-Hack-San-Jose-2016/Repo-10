@@ -1,9 +1,5 @@
 dependencies: \
-<<<<<<< HEAD
   /Users/akshay/Documents/Programming/Repo-10/app/ios/HelperUpperTests/HelperUpperTests.m \
-=======
-  /Users/anuragbanerjee/Dropbox/Development/Repos/HelperUpper/app/ios/HelperUpperTests/HelperUpperTests.m \
->>>>>>> origin/master
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Modules/module.modulemap \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIRemote.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCUIKeyboardKeys.h \

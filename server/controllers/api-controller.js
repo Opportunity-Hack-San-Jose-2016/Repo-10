@@ -9,10 +9,33 @@ exports.getListings = function(req, res){
 	var listings = db.ref("listings");
 	listings.once('value', function(snapshot){
 		data = snapshot.val();
-		res.json(data);
 		res.status(200);
-		res.send();
+		res.json(data);
 	});
+};
+
+// API Endpoint - POST /api/v1/listings
+exports.postListing = function(req, res){
+	
+	var listing = {};
+	listing.location = {}
+	listing.location.lat = req.body.location.lat
+	listing.location.lng = req.body.location.lng
+	listing.name = req.body.name
+	listing.type = req.body.type
+	listing.reviews = {}
+	
+	var listings = db.ref("listings");
+	var newKey = listings.push(listing).key
+	req.params.id = newKey
+	
+	var href = req.protocol + "://" + req.get('host') + req.baseUrl + '/listings/' + newKey
+	returnVal = {}
+	returnVal.href = href;
+	returnVal.itemId= newKey
+	returnVal.item = listing
+	res.status(201)
+	res.json(returnVal)
 };
 
 // API Endpoint - GET /api/v1/listings/id/:id
@@ -23,8 +46,8 @@ exports.getListingById = function(req, res){
 
 		data = snapshot.val() //listings table
 		if (data != undefined){
-			res.json(data)
 			res.status(200)
+			res.json(data)
 		} else {
 			res.status(418)
 			res.json({
@@ -33,7 +56,6 @@ exports.getListingById = function(req, res){
 				real_status: 404
 			})
 		}
-		res.send()
 	})
 }
 
@@ -41,16 +63,14 @@ exports.getListingById = function(req, res){
 exports.getListingByType = function(req, res) {
 	var listings = db.ref("listings")
 	listings.orderByChild('type').equalTo(req.params.type).once('value', function(snapshot){
-		data = snapshot.val();
+		var data = snapshot.val();
 		if(data == null){
 			data = []
 		}
-		res.json(data);
 		res.status(200);
-		res.send();
+		res.json(data);
 	});
 }
-
 
 // API Endpoint GET /api/v1/listings/nearby/:distance?lat=&lng=
 exports.getListingsNearby = function(req, res) {
@@ -60,7 +80,6 @@ exports.getListingsNearby = function(req, res) {
 	if(lat == null || lng == null || req.params.distance == null) {
 		res.status(400)
 		res.json({message:"Missing latitude, longitude, or miles parameters"})
-		res.send();
 	} else {
 		origin = {}
 		origin.lat = lat
@@ -76,9 +95,8 @@ exports.getListingsNearby = function(req, res) {
 				}
 				
 			}
-			res.json(nearby_listings);
 			res.status(200);
-			res.send();
+			res.json(nearby_listings);
 		});
 	}
 }
@@ -125,7 +143,6 @@ exports.getReviewByListing = function(req, res){
 		if (listing_id > data.length || listing_id < 0) {
 			res.status(418);
 			res.json({"message": "invalid"});
-			res.send();
 		}
 
 
@@ -142,7 +159,6 @@ exports.getReviewByListing = function(req, res){
 			}
 			res.status(200);
 			res.json(result);
-			res.send();
 		});
 
 	})
@@ -155,7 +171,6 @@ exports.getReviewById = function(req, res){
 		var result = snapshot.val()[review_id];
 		res.status(200);
 		res.json(result);
-		res.send();
 	})
 }
 	
@@ -170,7 +185,6 @@ exports.updateReviewById = function(req, res){
 		rating: req.params.rating
 	});
 	res.status(200);
-	res.send();
 
 }
 

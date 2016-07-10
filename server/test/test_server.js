@@ -8,11 +8,7 @@ describe('test suite for server.js', function(done){
 	it('GETs the API endpoint at /api/v1/listings', function(done){
 		request(server).get('/api/v1/listings').end(function(err, res){
 			assert.equal(res.status, 200, 'Status was not 200 OK')
-			assert.isTrue(res.body.length > 0, 'Should have only 4 test listings')
-//			items = ['bk', 'mcdeez', 'chipotle', 'innout']
-//			for(i = 0; i < res.body.length; i++){
-//				assert.isTrue(items.indexOf(res.body[i].name) >= 0, res.body[i].name + ' listing name was not found')
-//			}
+			assert.isTrue(Object.keys(res.body).length > 0, 'Should have more than 0 test listings')
 			done();
 		});
 	});
@@ -33,8 +29,27 @@ describe('test suite for server.js', function(done){
 		id = 'job'
 		request(server).get('/api/v1/listings/type/' + id).end(function(err, res){
 			assert.equal(res.status, 200, 'Status was not 200 OK')
-			assert.isTrue(data.length > 0, 'There was no data present under listings/id')
+			assert.isTrue(Object.keys(res.body).length > 0, 'There was no data present under listings/type/:type')
 			done();
+		});
+	});
+	it('POSTs at the API endpoint: /api/v1/listings', function(done){
+		listingData = {
+			name:'test_listing_name',
+			location: {
+				lat: 37.7,
+				lng: -122.9
+			},
+			type: 'job'
+		}
+		request(server).post('/api/v1/listings')
+			.type('form')
+			.send(listingData)
+			.end(function(err, res){
+				assert.equal(res.status, 201, 'Status was not 201 OK')
+				
+				assert.isTrue(Object.keys(res.body).length > 0, 'There was no data present under listings/type/:type')
+				done();
 		});
 	});
 	it('GETs list of listings within x miles of location: /api/v1/listings/nearby/:distance?lat=&lng=?', function(done){
@@ -42,16 +57,14 @@ describe('test suite for server.js', function(done){
 		request(server).get('/api/v1/listings/nearby/' + qp).end(function(err, res){
 			assert.equal(res.status, 200, 'Status was not 200 OK')
 			assert.isTrue(res.body.length > 0)
-//			assert.isTrue(data.length > 0, 'There was no data present under listings/id')
 			done();
 		});
 	});
-	
 	it('GETs a non-existing ID at the API endpoint: /api/v1/listings/type/:type', function(done){
 		id = '12345678wehavukeyfbhksjd'
 		request(server).get('/api/v1/listings/type/' + id).end(function(err, res){
-			assert.equal(res.status, 200, 'Status was not 200 OK')
-			assert.isTrue(data.length == 0, 'There was no data present under listings/id')
+			assert.equal(res.status, 200, 'Status should have been 200 OK')
+			assert.isTrue(res.body.length == 0, 'There was no data present under listings/id')
 			done();
 		});
 	});

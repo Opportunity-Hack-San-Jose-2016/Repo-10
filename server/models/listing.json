@@ -11,7 +11,20 @@ listing = {
 	"time": {
 		"type": "unix-timestamp"
 	},
+<<<<<<< HEAD
 	"type": {
 		"type": "string"
+=======
+	type: {
+		type: string
+	},
+	location: {
+		latitude: {
+			type: number
+		},
+		longitude: {
+			type:number
+		}
+>>>>>>> Backend
 	}
 }

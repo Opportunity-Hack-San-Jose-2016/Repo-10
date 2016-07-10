@@ -69,12 +69,12 @@ function verifyRequestSignature(req, res, buf) {
   }
 }
 
-var listings = db.ref("listings");
 
 
 
 router.route('/listings/:id')
 	.get(function(req, res){
+		var listings = db.ref("listings");
 		l_id = req.params.id
 		listings.once('value', function(snapshot){
     		
@@ -97,7 +97,7 @@ router.route('/listings/:id')
 
 router.route('/listings')
 	.get(function(req, res){
-	var listings = db.ref("listings");
+		var listings = db.ref("listings");
 		listings.once('value', function(snapshot){
 			data = snapshot.val();
 			res.json(data);

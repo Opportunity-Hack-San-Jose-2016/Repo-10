@@ -25,6 +25,7 @@ class Category extends Component {
         })}}>
         <View style={styles.row}>
           <Text>{this.props.item.name}</Text>
+          <Text style={styles.description}>{this.props.item.description}</Text>
         </View>
       </TouchableOpacity>
     );
@@ -46,6 +47,10 @@ const styles = StyleSheet.create({
   name: {
     color: 'black',
     fontSize: 16,
+  },
+  description: {
+    color: '#333333',
+    fontSize: 12
   }
 })
 

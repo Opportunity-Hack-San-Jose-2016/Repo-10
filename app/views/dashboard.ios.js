@@ -24,7 +24,12 @@ class Dashboard extends Component {
     this.state = {
       dataSource: new ListView.DataSource({
         rowHasChanged: (row1, row2) => row1 !== row2,
-      }).cloneWithRows([{ name: 'Events', type: 'category' }, { name: 'Jobs', type: 'category' }, { name: 'Coupons', type: 'category' }, { name: 'Help', type: 'category' }, { name: 'About Us', type: 'category' }, ])
+      }).cloneWithRows([
+        { 'name': 'Events', 'type': 'category', 'description': 'Have fun with family and friends!' },
+        { 'name': 'Jobs', 'type': 'category', 'description': 'Start getting a steady paycheck.' },
+        { 'name': 'Coupons', 'type': 'category', 'description': 'Save big money!' },
+        { 'name': 'Help', 'type': 'category', 'description': 'Find help paying rent, food, and other life necessities.' }
+      ])
     };
     this.listings = db.ref("listings");
   }

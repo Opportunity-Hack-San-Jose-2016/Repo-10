@@ -17,7 +17,7 @@ class ListingJob extends Component {
   render() {
     return (
       <View style={styles.row}>
-        <Text>{JSON.stringify(this.props.item)}</Text>
+        <Text>{this.props.item.name}</Text>
       </View>
     );
   }

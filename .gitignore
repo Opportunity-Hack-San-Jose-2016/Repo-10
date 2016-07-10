@@ -4,30 +4,30 @@
 
 # Xcode
 #
-app/build/
-app/*.pbxuser
-app/!default.pbxuser
-app/*.mode1v3
-app/!default.mode1v3
-app/*.mode2v3
-app/!default.mode2v3
-app/*.perspectivev3
-app/!default.perspectivev3
-app/xcuserdata
-app/*.xccheckout
-app/*.moved-aside
-app/DerivedData
-app/*.hmap
-app/*.ipa
-app/*.xcuserstate
-app/project.xcworkspace
+app/ios/build/
+app/ios/*.pbxuser
+app/ios/!default.pbxuser
+app/ios/*.mode1v3
+app/ios/!default.mode1v3
+app/ios/*.mode2v3
+app/ios/!default.mode2v3
+app/ios/*.perspectivev3
+app/ios/!default.perspectivev3
+app/ios/xcuserdata
+app/ios/*.xccheckout
+app/ios/*.moved-aside
+app/ios/DerivedData
+app/ios/*.hmap
+app/ios/*.ipa
+app/ios/*.xcuserstate
+app/ios/project.xcworkspace
 
 # Android/IJ
 #
-app/*.iml
-app/.idea
-app/.gradle
-app/local.properties
+app/android/*.iml
+app/android/.idea
+app/android/.gradle
+app/android/local.properties
 
 # node.js
 #

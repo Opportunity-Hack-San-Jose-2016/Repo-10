@@ -9,10 +9,33 @@ exports.getListings = function(req, res){
 	var listings = db.ref("listings");
 	listings.once('value', function(snapshot){
 		data = snapshot.val();
-		res.json(data);
 		res.status(200);
-		res.send();
+		res.json(data);
 	});
+};
+
+// API Endpoint - POST /api/v1/listings
+exports.postListing = function(req, res){
+	
+	var listing = {};
+	listing.location = {}
+	listing.location.lat = req.body.location.lat
+	listing.location.lng = req.body.location.lng
+	listing.name = req.body.name
+	listing.type = req.body.type
+	listing.reviews = {}
+	
+	var listings = db.ref("listings");
+	var newKey = listings.push(listing).key
+	req.params.id = newKey
+	
+	var href = req.protocol + "://" + req.get('host') + req.baseUrl + '/listings/' + newKey
+	returnVal = {}
+	returnVal.href = href;
+	returnVal.itemId= newKey
+	returnVal.item = listing
+	res.status(201)
+	res.json(returnVal)
 };
 
 // API Endpoint - GET /api/v1/listings/id/:id
@@ -23,8 +46,8 @@ exports.getListingById = function(req, res){
 
 		data = snapshot.val() //listings table
 		if (data != undefined){
-			res.json(data)
 			res.status(200)
+			res.json(data)
 		} else {
 			res.status(418)
 			res.json({
@@ -33,7 +56,6 @@ exports.getListingById = function(req, res){
 				real_status: 404
 			})
 		}
-		res.send()
 	})
 }
 
@@ -41,16 +63,14 @@ exports.getListingById = function(req, res){
 exports.getListingByType = function(req, res) {
 	var listings = db.ref("listings")
 	listings.orderByChild('type').equalTo(req.params.type).once('value', function(snapshot){
-		data = snapshot.val();
+		var data = snapshot.val();
 		if(data == null){
 			data = []
 		}
-		res.json(data);
 		res.status(200);
-		res.send();
+		res.json(data);
 	});
 }
-
 
 // API Endpoint GET /api/v1/listings/nearby/:distance?lat=&lng=
 exports.getListingsNearby = function(req, res) {
@@ -60,7 +80,6 @@ exports.getListingsNearby = function(req, res) {
 	if(lat == null || lng == null || req.params.distance == null) {
 		res.status(400)
 		res.json({message:"Missing latitude, longitude, or miles parameters"})
-		res.send();
 	} else {
 		origin = {}
 		origin.lat = lat
@@ -76,9 +95,8 @@ exports.getListingsNearby = function(req, res) {
 				}
 				
 			}
-			res.json(nearby_listings);
 			res.status(200);
-			res.send();
+			res.json(nearby_listings);
 		});
 	}
 }
@@ -125,7 +143,6 @@ exports.getReviewByListing = function(req, res){
 		if (listing_id > data.length || listing_id < 0) {
 			res.status(418);
 			res.json({"message": "invalid"});
-			res.send();
 		}
 
 
@@ -142,7 +159,6 @@ exports.getReviewByListing = function(req, res){
 			}
 			res.status(200);
 			res.json(result);
-			res.send();
 		});
 
 	})
@@ -154,8 +170,7 @@ exports.getReviewById = function(req, res){
 	db.ref("reviews/" + review_id).once("value", function (snapshot) {
 		res.status(200);
 		res.json(snapshot.val());
-		res.send();
-	})
+	});
 }
 	
 
@@ -169,9 +184,69 @@ exports.updateReviewById = function(req, res){
 		rating: req.params.rating
 	});
 	res.status(200);
-	res.send();
 
 }
+
+// API Endpoint - GET /api/v1/listings/search/:keywords
+exports.searchListings = function(req, res) {
+	var terms = req.params.keywords;
+	terms = terms.toLowerCase();
+	var arr = terms.split(" ");
+	var result = [];
+	var listings = db.ref("listings");
+	if (!arr.length) {
+		res.json([]);
+		return;
+	}
+
+	listings.once("value", function (snapshot) {
+		var data = snapshot.val();
+		for (var key in data) {
+			if (data.hasOwnProperty(key)) {
+				var entry = data[key];
+	            var count = getNumOccurences(arr[0], entry.name);
+				if (count > 0) {
+					var toPush = {"score" : count, data: entry};
+					result.push(toPush);
+				}
+			}
+		}
+		for (var i = 1; i < arr.length; i++) {
+			var keyword = arr[i];
+			for (var j = 0; j < result.length; j++) {
+				var count = getNumOccurences(keyword, result[j].data.name);
+				if (count <= 0) {
+					result.splice(j, 1);
+					j--;
+				} else {
+					result[j].score += count;
+				}
+			}
+		}
+
+		result.sort(function(x, y) {
+			return x.score > y.score;
+		});
+		res.status(200);
+		res.json(result);
+	});
+};
+
+function getNumOccurences(substring, string) {
+	string = string.toLowerCase();
+	substring = substring.toLowerCase();
+	var res = 0;
+	var index = string.indexOf(substring);
+	while (index != -1) {
+		string = string.slice(index + substring.length, string.length);
+		res++;
+		index = string.indexOf(substring);
+	}
+
+	return res;
+}
+
+
 
 // API Endpoint GET /api/v1/listings/nearby/:distance
 

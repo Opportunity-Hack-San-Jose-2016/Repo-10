@@ -77,7 +77,10 @@ router.route('/listings/type/:type')
 router.route('/listings/nearby/:distance')
 	.get(api.getListingsNearby);
 router.route('/listings')
-	.get(api.getListings);
+	.get(api.getListings)
+	.post(api.postListing);
+router.route('/listings/search/:keywords')
+	.get(api.searchListings);
 
 var reviews = db.ref("reviews");
 

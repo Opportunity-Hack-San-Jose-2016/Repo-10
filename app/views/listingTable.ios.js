@@ -29,10 +29,9 @@ class ListingTable extends Component {
   }
 
   componentDidMount () {
-    fetch("http://192.168.85.118:8080/api/v1/listings/type/" + this.props.type.toLowerCase())
+    fetch("https://ec5aaf7b.ngrok.io/api/v1/listings/type/" + this.props.type.toLowerCase())
       .then((res) => res.json())
       .then((resJSON) => {
-        console.log(resJSON);
         this.setState({
           dataSource: this.state.dataSource.cloneWithRows(resJSON)
         });
